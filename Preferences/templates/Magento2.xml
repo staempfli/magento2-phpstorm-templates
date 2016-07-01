@@ -1,0 +1,11 @@
+<templateSet group="Magento2">
+  <template name="test" value="this is another test&#10;&#10;${PROJECT_NAME}&#10;&#10;$Here$&#10;&#10;$not$" toReformat="false" toShortenFQNames="true">
+    <variable name="Here" expression="" defaultValue="&quot;automatic&quot;" alwaysStopAt="true" />
+    <variable name="not" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="XSL_TEXT" value="true" />
+      <option name="XML" value="true" />
+      <option name="XML_TEXT" value="true" />
+    </context>
+  </template>
+</templateSet>

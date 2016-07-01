@@ -1,0 +1,3 @@
+#set($company = "Staempfli AG")
+#set($companyUrl = "http://www.staempfli.com")
+#set($userEmail = "juan.alonso@staempfli.com")
