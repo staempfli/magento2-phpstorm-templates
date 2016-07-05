@@ -11,7 +11,7 @@ This project is intent to setup useful PHPStorm configuration for Magento 2 Proj
 
 ```
 $ find ~ -type f -name "idea.properties" -exec dirname {} + | xargs -I{} rsync -a {}/ {}/../PhpStormBackup`
-``
+```
 
 2. Remove current preferences and create Symlinks to custom one. Go into this repo `$ cd m2-phpstorm` and execute the following: 
 
@@ -22,7 +22,7 @@ $ find * -maxdepth 0 | xargs -I{} ln -s $(pwd)/{} $(find ~ -type f -name "idea.p
 ```
 
 3. Private configuration
-`
+
 ```
 $ cp Preferences/fileTemplates/includes/stmpfl_variables.txt.dist Preferences/fileTemplates/includes/stmpfl_variables.txt
 $ vim Preferences/fileTemplates/includes/stmpfl_variables.txt
