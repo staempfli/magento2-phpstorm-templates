@@ -7,7 +7,8 @@
 * 2M Model Resource
 * 2M Model Collection
 * 2M InstallSchema
-* 2M ui mass action
+* 2M ui massAction grid
+* 2M InlineEdit grid
 
 * 2M XML
 * 2M module.xml
