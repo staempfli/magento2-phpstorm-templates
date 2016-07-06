@@ -52,24 +52,15 @@ class ${NAME} extends \Magento\Backend\App\Action
             ]);
         }
 
-        foreach (array_keys(${DS}postItems) as ${DS}objectId) {
+         foreach (array_keys(${DS}postItems) as ${DS}objectId) {
             try {
                 ${DS}object = ${DS}this->objectModel->load(${DS}objectId);
-                ${DS}object->setData(${DS}object->getData(), ${DS}postItems[${DS}objectId]);
+                ${DS}object->setData(array_merge(${DS}object->getData(), ${DS}postItems[${DS}objectId]));
                 ${DS}this->objectModel->save(${DS}object);
-            } catch (\Magento\Framework\Exception\LocalizedException ${DS}e) {
-                ${DS}messages[] = ${DS}this->getErrorWithObjectId(${DS}object, ${DS}e->getMessage());
-                ${DS}error = true;
-            } catch (\RuntimeException ${DS}e) {
-                ${DS}messages[] = ${DS}this->getErrorWithObjectId(${DS}object, ${DS}e->getMessage());
-                ${DS}error = true;
             } catch (\Exception ${DS}e) {
-                ${DS}messages[] = ${DS}this->getErrorWithObjectId(
-                    ${DS}object,
-                    __('Something went wrong while saving the record.')
-                );
+                ${DS}messages[] = '[Record ID: ' . ${DS}object->getId() . '] ' . ${DS}e->getMessage();
                 ${DS}error = true;
-            }
+            } 
         }
 
         return ${DS}resultJson->setData([
