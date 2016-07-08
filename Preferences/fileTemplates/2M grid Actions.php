@@ -9,6 +9,11 @@ use Magento\Ui\Component\Listing\Columns\Column;
 
 class ${NAME} extends Column
 {
+     /**
+     * Url path
+     */
+    const URL_PATH_EDIT = '${FRONTNAME}/${CONTROLLER}/edit';
+
     /**
      * @var UrlInterface
      */
@@ -49,7 +54,7 @@ class ${NAME} extends Column
                 if (isset(${DS}item['${PRIMARY_FIELDNAME}'])) {
                     ${DS}item[$this->getData('name')]['edit'] = [
                         'href' => ${DS}this->urlBuilder->getUrl(
-                            '*/*/edit',
+                            self::URL_PATH_EDIT,
                             ['id' => ${DS}item['${PRIMARY_FIELDNAME}'], 'store' => ${DS}storeId]
                         ),
                         'label' => __('Edit'),
