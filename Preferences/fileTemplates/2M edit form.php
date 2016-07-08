@@ -75,6 +75,7 @@ class ${NAME} extends \Magento\Backend\App\Action
         }
 
         // 4. Register model to use later in blocks
+        ${DS}this->_coreRegistry->register('form_record', ${DS}this->objectModel);
         ${DS}this->_coreRegistry->register('${PRIMARY_FIELDNAME}', ${DS}id);
 
         // 5. Build edit form

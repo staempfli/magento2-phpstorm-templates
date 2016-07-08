@@ -5,11 +5,6 @@
 class ${NAME} extends Magento\Framework\Model\ResourceModel\Db\Collection\AbstractCollection
 {
     /**
-     * @var string
-     */
-    protected $_idFieldName = '${PRIMARY_FIELD}';
-
-    /**
      * Define resource model
      *
      * @return void

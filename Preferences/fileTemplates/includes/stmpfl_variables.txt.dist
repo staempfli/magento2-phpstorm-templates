@@ -1,0 +1,3 @@
+#set($company = "<company_name>")
+#set($companyUrl = "<company_url>")
+#set($userEmail = "<user_email>")

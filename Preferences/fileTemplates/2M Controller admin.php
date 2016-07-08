@@ -10,18 +10,18 @@ class ${NAME} extends \Magento\Backend\App\Action
     /**
      * @var PageFactory
      */
-    protected ${DS}resultPageFactory;
+    protected $resultPageFactory;
 
     /**
-     * @param Context ${DS}context
-     * @param PageFactory ${DS}resultPageFactory
+     * @param Context $context
+     * @param PageFactory $resultPageFactory
      */
     public function __construct(
-        Context ${DS}context,
-        PageFactory ${DS}resultPageFactory
+        Context $context,
+        PageFactory $resultPageFactory
     ) {
-        parent::__construct(${DS}context);
-        ${DS}this->resultPageFactory = ${DS}resultPageFactory;
+        parent::__construct($context);
+        $this->resultPageFactory = $resultPageFactory;
     }
 
     /**
@@ -31,7 +31,7 @@ class ${NAME} extends \Magento\Backend\App\Action
      */
     protected function _isAllowed()
     {
-        return ${DS}this->_authorization->isAllowed('${ACL_is_allowed}');
+        return $this->_authorization->isAllowed('${ACL_is_allowed}');
     }
 
     /**
@@ -41,9 +41,9 @@ class ${NAME} extends \Magento\Backend\App\Action
      */
     public function execute()
     {
-        /** @var \Magento\Backend\Model\View\Result\Page ${DS}resultPage */
-        ${DS}resultPage = ${DS}this->resultPageFactory->create();
+        /** @var \Magento\Backend\Model\View\Result\Page $resultPage */
+        $resultPage = $this->resultPageFactory->create();
 
-        return ${DS}resultPage;
+        return $resultPage;
     }
 }
