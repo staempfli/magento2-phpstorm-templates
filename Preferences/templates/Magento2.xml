@@ -87,7 +87,7 @@
   <template name="2m form input field" value="&lt;field name=&quot;$fieldId$&quot;&gt;&#10;    &lt;argument name=&quot;data&quot; xsi:type=&quot;array&quot;&gt;&#10;        &lt;item name=&quot;config&quot; xsi:type=&quot;array&quot;&gt;&#10;            &lt;item name=&quot;visible&quot; xsi:type=&quot;boolean&quot;&gt;true&lt;/item&gt;&#10;            &lt;item name=&quot;dataType&quot; xsi:type=&quot;string&quot;&gt;text&lt;/item&gt;&#10;            &lt;item name=&quot;label&quot; xsi:type=&quot;string&quot;&gt;$fieldLabel$&lt;/item&gt;&#10;            &lt;item name=&quot;formElement&quot; xsi:type=&quot;string&quot;&gt;input&lt;/item&gt;&#10;            &lt;item name=&quot;source&quot; xsi:type=&quot;string&quot;&gt;$providerSource$&lt;/item&gt;&#10;        &lt;/item&gt;&#10;    &lt;/argument&gt;&#10;&lt;/field&gt;&#10;$END$" toReformat="false" toShortenFQNames="true">
     <variable name="fieldId" expression="" defaultValue="" alwaysStopAt="true" />
     <variable name="fieldLabel" expression="" defaultValue="" alwaysStopAt="true" />
-    <variable name="providerSource" expression="" defaultValue="collection_items" alwaysStopAt="true" />
+    <variable name="providerSource" expression="" defaultValue="main_fieldset" alwaysStopAt="true" />
     <context>
       <option name="XSL_TEXT" value="true" />
       <option name="XML" value="true" />
@@ -98,7 +98,7 @@
     <variable name="fieldId" expression="" defaultValue="" alwaysStopAt="true" />
     <variable name="UiComponent" expression="" defaultValue="" alwaysStopAt="true" />
     <variable name="fieldLabel" expression="" defaultValue="" alwaysStopAt="true" />
-    <variable name="providerSource" expression="" defaultValue="collection_items" alwaysStopAt="true" />
+    <variable name="providerSource" expression="" defaultValue="main_fieldset" alwaysStopAt="true" />
     <context>
       <option name="XSL_TEXT" value="true" />
       <option name="XML" value="true" />
@@ -108,7 +108,7 @@
   <template name="2m form date field" value="&lt;field name=&quot;$fieldId$&quot;&gt;&#10;    &lt;argument name=&quot;data&quot; xsi:type=&quot;array&quot;&gt;&#10;        &lt;item name=&quot;config&quot; xsi:type=&quot;array&quot;&gt;&#10;            &lt;item name=&quot;label&quot; xsi:type=&quot;string&quot;&gt;$FieldLabel$&lt;/item&gt;&#10;            &lt;item name=&quot;visible&quot; xsi:type=&quot;boolean&quot;&gt;true&lt;/item&gt;&#10;            &lt;item name=&quot;dataType&quot; xsi:type=&quot;string&quot;&gt;text&lt;/item&gt;&#10;            &lt;item name=&quot;formElement&quot; xsi:type=&quot;string&quot;&gt;date&lt;/item&gt;&#10;            &lt;item name=&quot;source&quot; xsi:type=&quot;string&quot;&gt;$providerSource$&lt;/item&gt;&#10;            &lt;item name=&quot;validation&quot; xsi:type=&quot;array&quot;&gt;&#10;                &lt;item name=&quot;validate-date&quot; xsi:type=&quot;boolean&quot;&gt;true&lt;/item&gt;&#10;            &lt;/item&gt;&#10;        &lt;/item&gt;&#10;    &lt;/argument&gt;&#10;&lt;/field&gt;&#10;$END$" toReformat="false" toShortenFQNames="true">
     <variable name="fieldId" expression="" defaultValue="" alwaysStopAt="true" />
     <variable name="FieldLabel" expression="" defaultValue="" alwaysStopAt="true" />
-    <variable name="providerSource" expression="" defaultValue="collection_items" alwaysStopAt="true" />
+    <variable name="providerSource" expression="" defaultValue="main_fieldset" alwaysStopAt="true" />
     <context>
       <option name="XSL_TEXT" value="true" />
       <option name="XML" value="true" />

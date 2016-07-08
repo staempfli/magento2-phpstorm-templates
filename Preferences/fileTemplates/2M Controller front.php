@@ -10,16 +10,16 @@ class ${NAME} extends \Magento\Framework\App\Action\Action
     /**
      * @var PageFactory
      */
-    protected $pageFactory;
+    protected ${DS}pageFactory;
 
     /**
-     * @param Context $context
-     * @param PageFactory $pageFactory
+     * @param Context ${DS}context
+     * @param PageFactory ${DS}pageFactory
      */
-    public function __construct(Context $context, PageFactory $pageFactory)
+    public function __construct(Context ${DS}context, PageFactory ${DS}pageFactory)
     {
-        $this->pageFactory = $pageFactory;
-        return parent::__construct($context);
+        ${DS}this->pageFactory = ${DS}pageFactory;
+        return parent::__construct(${DS}context);
     }
 
     /**
@@ -29,8 +29,8 @@ class ${NAME} extends \Magento\Framework\App\Action\Action
      */
     public function execute()
     {
-        /** @var \Magento\Framework\View\Result\Page $resultPage */
-        $resultPage = $this->pageFactory->create();
-        return $resultPage;
+        /** @var \Magento\Framework\View\Result\Page ${DS}resultPage */
+        ${DS}resultPage = ${DS}this->pageFactory->create();
+        return ${DS}resultPage;
     }
 }

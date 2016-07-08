@@ -101,7 +101,7 @@
             <argument name="data" xsi:type="array">
                 <item name="config" xsi:type="array">
                     <item name="selectProvider" xsi:type="string">${NAME}.${NAME}.${NAME}_columns.ids</item>
-                    <item name="indexField" xsi:type="string">page_id</item>
+                    <item name="indexField" xsi:type="string">${PRIMARY_FIELDNAME}</item>
                 </item>
             </argument>
             <action name="delete">

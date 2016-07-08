@@ -6,4 +6,4 @@
  * @author    ${userEmail}
  */
  
-namespace #[[$Namespace$]]#
+namespace #[[$Namespace$]]#;
