@@ -52,10 +52,10 @@ class ${NAME} extends Column
 
             foreach (${DS}dataSource['data']['items'] as &${DS}item) {
                 if (isset(${DS}item['${PRIMARY_FIELDNAME}'])) {
-                    ${DS}item[$this->getData('name')]['edit'] = [
+                    ${DS}item[${DS}this->getData('name')]['edit'] = [
                         'href' => ${DS}this->urlBuilder->getUrl(
                             self::URL_PATH_EDIT,
-                            ['id' => ${DS}item['${PRIMARY_FIELDNAME}'], 'store' => ${DS}storeId]
+                            ['${PRIMARY_FIELDNAME}' => ${DS}item['${PRIMARY_FIELDNAME}'], 'store' => ${DS}storeId]
                         ),
                         'label' => __('Edit'),
                         'hidden' => false,
@@ -64,6 +64,6 @@ class ${NAME} extends Column
             }
         }
 
-        return $dataSource;
+        return ${DS}dataSource;
     }
 }

@@ -31,7 +31,7 @@
       <option name="XML_TEXT" value="true" />
     </context>
   </template>
-  <template name="2m admin menu active" value=" $resultPage-&gt;setActiveMenu('$Menu$')&#10;            -&gt;addBreadcrumb(__('$breadcrum1$'), __('$breadcrum1$'))&#10;            -&gt;addBreadcrumb(__('$breadcrum2$'), __('$breadcrum2$'));&#10; $resultPage-&gt;getConfig()-&gt;getTitle()-&gt;prepend(__('$title$'));" toReformat="false" toShortenFQNames="true">
+  <template name="2m admin menu active" value="$resultPage-&gt;setActiveMenu('$Menu$')&#10;        -&gt;addBreadcrumb(__('$breadcrum1$'), __('$breadcrum1$'))&#10;        -&gt;addBreadcrumb(__('$breadcrum2$'), __('$breadcrum2$'));&#10;$resultPage-&gt;getConfig()-&gt;getTitle()-&gt;prepend(__('$title$'));" toReformat="false" toShortenFQNames="true">
     <variable name="Menu" expression="" defaultValue="" alwaysStopAt="true" />
     <variable name="breadcrum1" expression="" defaultValue="" alwaysStopAt="true" />
     <variable name="breadcrum2" expression="" defaultValue="" alwaysStopAt="true" />
@@ -114,5 +114,18 @@
       <option name="XML" value="true" />
       <option name="XML_TEXT" value="true" />
     </context>
+  </template>
+  <template name="2m widget param select" value="&lt;parameter name=&quot;$name$&quot; xsi:type=&quot;select&quot; source_model=&quot;$source$&quot; visible=&quot;true&quot; sort_order=&quot;$sortOrder$&quot; &gt;&#10;    &lt;label translate=&quot;true&quot;&gt;$label$&lt;/label&gt;&#10;&lt;/parameter&gt;&#10;$END$" toReformat="false" toShortenFQNames="true">
+    <variable name="name" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="source" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="sortOrder" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="label" expression="" defaultValue="" alwaysStopAt="true" />
+    <context />
+  </template>
+  <template name="2m widget param text" value="&lt;parameter name=&quot;$name$&quot; xsi:type=&quot;text&quot; visible=&quot;true&quot; sort_order=&quot;$sortOrder$&quot; &gt;&#10;    &lt;label translate=&quot;true&quot;&gt;$label$&lt;/label&gt;&#10;&lt;/parameter&gt;&#10;$END$" toReformat="false" toShortenFQNames="true">
+    <variable name="name" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="sortOrder" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="label" expression="" defaultValue="" alwaysStopAt="true" />
+    <context />
   </template>
 </templateSet>

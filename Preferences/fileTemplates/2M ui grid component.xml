@@ -194,7 +194,8 @@
             </argument>
         </column>
         <!-- Add more columns here -->
-        <actionsColumn name="actions" class="${ACTION_COLUMNS_CLASS}">
+        #[[$END$]]#
+        <actionsColumn name="actions" class="#[[$VendorName$]]#\#[[$ModuleName$]]#\Ui\Component\Listing\Column\#[[$ActionClass$]]#Action">
             <argument name="data" xsi:type="array">
                 <item name="config" xsi:type="array">
                     <item name="indexField" xsi:type="string">${PRIMARY_FIELDNAME}</item>

@@ -13,7 +13,7 @@ use Magento\Framework\Controller\Result\JsonFactory;
 class ${NAME} extends \Magento\Backend\App\Action
 {
     
-    /** @var ${OBJECT_MODEL} ${DS}objectModel */
+    /** @var \#[[$OBJECT_MODEL$]]# ${DS}objectModel */
     protected ${DS}objectModel;
 
     /** @var JsonFactory ${DS}jsonFactory */
@@ -21,17 +21,27 @@ class ${NAME} extends \Magento\Backend\App\Action
 
     /**
      * @param Context ${DS}context
-     * @param ${OBJECT_MODEL} ${DS}objectModel
+     * @param \#[[$OBJECT_MODEL$]]# ${DS}objectModel
      * @param JsonFactory ${DS}jsonFactory
      */
     public function __construct(
         Context ${DS}context,
-        ${OBJECT_MODEL} ${DS}objectModel,
+        \#[[$OBJECT_MODEL$]]# ${DS}objectModel,
         JsonFactory ${DS}jsonFactory
     ) {
         parent::__construct(${DS}context);
         ${DS}this->objectModel = ${DS}objectModel;
         ${DS}this->jsonFactory = ${DS}jsonFactory;
+    }
+
+    /**
+     * Check the permission to run it
+     *
+     * @return boolean
+     */
+    protected function _isAllowed()
+    {
+        return ${DS}this->_authorization->isAllowed('${ACL_is_allowed}');
     }
 
     /**
