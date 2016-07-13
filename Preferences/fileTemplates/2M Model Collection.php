@@ -2,12 +2,12 @@
 #parse("stmpfl_variables.txt")
 #parse("stmpfl_header_php.php")
 
-class ${NAME} extends Magento\Framework\Model\ResourceModel\Db\Collection\AbstractCollection
+class ${NAME} extends \Magento\Framework\Model\ResourceModel\Db\Collection\AbstractCollection
 {
      /**
      * @var string
      */
-    protected $_idFieldName = '${PRIMARY_FIELD}';
+    protected ${DS}_idFieldName = '${PRIMARY_FIELD}';
     
     /**
      * Define resource model
@@ -16,6 +16,6 @@ class ${NAME} extends Magento\Framework\Model\ResourceModel\Db\Collection\Abstra
      */
     protected function _construct()
     {
-        ${DS}this->_init('${MODEL}', '${RESOURCE_MODEL}');
+        ${DS}this->_init('#[[$model$]]#', '#[[$Namespace$]]#');
     }
 }

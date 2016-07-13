@@ -30,7 +30,7 @@ class ${NAME} extends \Magento\Framework\Model\AbstractModel implements Identity
      */
     protected function _construct()
     {
-        ${DS}this->_init('#[[$Namespace$]]#\ResourceModel\${NAME}');
+        ${DS}this->_init('#[[$Namespace$]]#\ResourceModel\\${NAME}');
     }
 
     /**

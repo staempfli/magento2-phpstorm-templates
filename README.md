@@ -4,7 +4,7 @@ This project is intended to setup useful PHPStorm configuration for Magento 2 Pr
 
 ## Installation
 
-**IMPORTANT:** Beware that this preferences overwrite the personal PHPStorm Preferences on your computer with the ones defined in this project
+**IMPORTANT:** Beware that the following steps overwrite the personal PHPStorm Preferences on your computer with the ones defined in this project
 
 
 1.- Create Backup from your current configuration, so you can recover it later on.
