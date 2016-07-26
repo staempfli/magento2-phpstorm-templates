@@ -7,17 +7,17 @@ use Magento\Widget\Block\BlockInterface;
 
 class ${NAME} extends Template implements BlockInterface
 {
-    //$(DS)_template = "template_path.phtml";
+     //protected ${DS}_template = "template_path.phtml";
 
     /**
-     * References constructor.
+     * Constructor
+     *
      * @param Template\Context ${DS}context
+     * @param array ${DS}data
      */
-    public function __construct(
-        Template\Context ${DS}context    
-    )
+    public function __construct(Template\Context ${DS}context, array ${DS}data = [])
     {
-        parent::__construct(${DS}context);
+        parent::__construct(${DS}context, ${DS}data);
     }
 
 }

@@ -2,9 +2,7 @@
   <template name="2m sequence" value="&lt;sequence&gt;&#10;    &lt;module name=&quot;$VendorName_ModuleName$&quot;/&gt;&#10;&lt;/sequence&gt;" toReformat="false" toShortenFQNames="true">
     <variable name="VendorName_ModuleName" expression="" defaultValue="" alwaysStopAt="true" />
     <context>
-      <option name="XSL_TEXT" value="true" />
       <option name="XML" value="true" />
-      <option name="XML_TEXT" value="true" />
     </context>
   </template>
   <template name="2m di grid" value="&lt;virtualType name=&quot;$GridName$GridDataProvider&quot; type=&quot;Magento\Framework\View\Element\UiComponent\DataProvider\DataProvider&quot;&gt;&#10;    &lt;arguments&gt;&#10;        &lt;argument name=&quot;collection&quot; xsi:type=&quot;object&quot; shared=&quot;false&quot;&gt;$ResourceModel$\Collection&lt;/argument&gt;&#10;        &lt;argument name=&quot;filterPool&quot; xsi:type=&quot;object&quot; shared=&quot;false&quot;&gt;$FilterPool$GridFilterPool&lt;/argument&gt;&#10;    &lt;/arguments&gt;&#10;&lt;/virtualType&gt;&#10;&lt;virtualType name=&quot;$FilterPool$GridFilterPool&quot; type=&quot;Magento\Framework\View\Element\UiComponent\DataProvider\FilterPool&quot;&gt;&#10;    &lt;arguments&gt;&#10;        &lt;argument name=&quot;appliers&quot; xsi:type=&quot;array&quot;&gt;&#10;            &lt;item name=&quot;regular&quot; xsi:type=&quot;object&quot;&gt;Magento\Framework\View\Element\UiComponent\DataProvider\RegularFilter&lt;/item&gt;&#10;            &lt;item name=&quot;fulltext&quot; xsi:type=&quot;object&quot;&gt;Magento\Framework\View\Element\UiComponent\DataProvider\FulltextFilter&lt;/item&gt;&#10;        &lt;/argument&gt;&#10;    &lt;/arguments&gt;&#10;&lt;/virtualType&gt;&#10;&lt;type name=&quot;Magento\Framework\View\Element\UiComponent\DataProvider\CollectionFactory&quot;&gt;&#10;    &lt;arguments&gt;&#10;        &lt;argument name=&quot;collections&quot; xsi:type=&quot;array&quot;&gt;&#10;            &lt;item name=&quot;$gridIdentifier$_listing_data_source&quot; xsi:type=&quot;string&quot;&gt;$ResourceModel$\Grid\Collection&lt;/item&gt;&#10;        &lt;/argument&gt;&#10;    &lt;/arguments&gt;&#10;&lt;/type&gt;&#10;&lt;type name=&quot;$ResourceModel$\Grid\Collection&quot;&gt;&#10;    &lt;arguments&gt;&#10;        &lt;argument name=&quot;mainTable&quot; xsi:type=&quot;string&quot;&gt;$gridIdentifier$&lt;/argument&gt;&#10;        &lt;argument name=&quot;eventPrefix&quot; xsi:type=&quot;string&quot;&gt;$gridIdentifier$_grid_collection&lt;/argument&gt;&#10;        &lt;argument name=&quot;eventObject&quot; xsi:type=&quot;string&quot;&gt;$gridIdentifier$_grid_collection&lt;/argument&gt;&#10;        &lt;argument name=&quot;resourceModel&quot; xsi:type=&quot;string&quot;&gt;$ResourceModel$&lt;/argument&gt;&#10;    &lt;/arguments&gt;&#10;&lt;/type&gt;" toReformat="false" toShortenFQNames="true">
@@ -13,9 +11,7 @@
     <variable name="FilterPool" expression="" defaultValue="" alwaysStopAt="true" />
     <variable name="gridIdentifier" expression="" defaultValue="" alwaysStopAt="true" />
     <context>
-      <option name="XSL_TEXT" value="true" />
       <option name="XML" value="true" />
-      <option name="XML_TEXT" value="true" />
     </context>
   </template>
   <template name="2m system section" value="&lt;section id=&quot;$section$&quot; translate=&quot;label&quot; type=&quot;text&quot; sortOrder=&quot;999&quot; showInDefault=&quot;1&quot; showInWebsite=&quot;0&quot; showInStore=&quot;0&quot;&gt;&#10;    &lt;label&gt;$section$&lt;/label&gt;&#10;    &lt;tab&gt;$tab$&lt;/tab&gt;&#10;    &lt;resource&gt;$resource$&lt;/resource&gt;&#10;    &lt;group id=&quot;$group$&quot; translate=&quot;label&quot; type=&quot;text&quot; sortOrder=&quot;1&quot; showInDefault=&quot;1&quot; showInWebsite=&quot;0&quot; showInStore=&quot;0&quot;&gt;&#10;        &lt;label&gt;$group$&lt;/label&gt;&#10;        &lt;field id=&quot;$field$&quot; translate=&quot;label&quot; type=&quot;$type$&quot; sortOrder=&quot;1&quot; showInDefault=&quot;1&quot; showInWebsite=&quot;0&quot; showInStore=&quot;0&quot;&gt;&#10;            &lt;label&gt;$field$&lt;/label&gt;&#10;        &lt;/field&gt;&#10;    &lt;/group&gt;&#10;&lt;/section&gt;" toReformat="false" toShortenFQNames="true">
@@ -26,9 +22,7 @@
     <variable name="field" expression="" defaultValue="" alwaysStopAt="true" />
     <variable name="type" expression="" defaultValue="" alwaysStopAt="true" />
     <context>
-      <option name="XSL_TEXT" value="true" />
       <option name="XML" value="true" />
-      <option name="XML_TEXT" value="true" />
     </context>
   </template>
   <template name="2m admin menu active" value="$resultPage-&gt;setActiveMenu('$Menu$')&#10;        -&gt;addBreadcrumb(__('$breadcrum1$'), __('$breadcrum1$'))&#10;        -&gt;addBreadcrumb(__('$breadcrum2$'), __('$breadcrum2$'));&#10;$resultPage-&gt;getConfig()-&gt;getTitle()-&gt;prepend(__('$title$'));" toReformat="false" toShortenFQNames="true">
@@ -44,9 +38,7 @@
     <variable name="name" expression="" defaultValue="" alwaysStopAt="true" />
     <variable name="Title" expression="" defaultValue="" alwaysStopAt="true" />
     <context>
-      <option name="XSL_TEXT" value="true" />
       <option name="XML" value="true" />
-      <option name="XML_TEXT" value="true" />
     </context>
   </template>
   <template name="2m grid select column" value="&lt;column name=&quot;$name$&quot;&gt;&#10;    &lt;argument name=&quot;data&quot; xsi:type=&quot;array&quot;&gt;&#10;        &lt;item name=&quot;options&quot; xsi:type=&quot;object&quot;&gt;$sourceModel$&lt;/item&gt;&#10;        &lt;item name=&quot;config&quot; xsi:type=&quot;array&quot;&gt;&#10;            &lt;item name=&quot;filter&quot; xsi:type=&quot;string&quot;&gt;select&lt;/item&gt;&#10;            &lt;item name=&quot;component&quot; xsi:type=&quot;string&quot;&gt;Magento_Ui/js/grid/columns/select&lt;/item&gt;&#10;            &lt;item name=&quot;editor&quot; xsi:type=&quot;string&quot;&gt;select&lt;/item&gt;&#10;            &lt;item name=&quot;dataType&quot; xsi:type=&quot;string&quot;&gt;select&lt;/item&gt;&#10;            &lt;item name=&quot;label&quot; xsi:type=&quot;string&quot; translate=&quot;true&quot;&gt;$title$&lt;/item&gt;&#10;            &lt;item name=&quot;visible&quot; xsi:type=&quot;boolean&quot;&gt;true&lt;/item&gt;&#10;        &lt;/item&gt;&#10;    &lt;/argument&gt;&#10;&lt;/column&gt;&#10;$END$" toReformat="false" toShortenFQNames="true">
@@ -54,34 +46,26 @@
     <variable name="sourceModel" expression="" defaultValue="" alwaysStopAt="true" />
     <variable name="title" expression="" defaultValue="" alwaysStopAt="true" />
     <context>
-      <option name="XSL_TEXT" value="true" />
       <option name="XML" value="true" />
-      <option name="XML_TEXT" value="true" />
     </context>
   </template>
   <template name="2m grid date column" value="&lt;column name=&quot;$name$&quot; class=&quot;Magento\Ui\Component\Listing\Columns\Date&quot;&gt;&#10;    &lt;argument name=&quot;data&quot; xsi:type=&quot;array&quot;&gt;&#10;        &lt;item name=&quot;config&quot; xsi:type=&quot;array&quot;&gt;&#10;            &lt;item name=&quot;filter&quot; xsi:type=&quot;string&quot;&gt;dateRange&lt;/item&gt;&#10;            &lt;item name=&quot;component&quot; xsi:type=&quot;string&quot;&gt;Magento_Ui/js/grid/columns/date&lt;/item&gt;&#10;            &lt;item name=&quot;dataType&quot; xsi:type=&quot;string&quot;&gt;date&lt;/item&gt;&#10;            &lt;item name=&quot;label&quot; xsi:type=&quot;string&quot; translate=&quot;true&quot;&gt;$title$&lt;/item&gt;&#10;            &lt;item name=&quot;visible&quot; xsi:type=&quot;boolean&quot;&gt;true&lt;/item&gt;&#10;        &lt;/item&gt;&#10;    &lt;/argument&gt;&#10;&lt;/column&gt;&#10;$END$" toReformat="false" toShortenFQNames="true">
     <variable name="name" expression="" defaultValue="" alwaysStopAt="true" />
     <variable name="title" expression="" defaultValue="" alwaysStopAt="true" />
     <context>
-      <option name="XSL_TEXT" value="true" />
       <option name="XML" value="true" />
-      <option name="XML_TEXT" value="true" />
     </context>
   </template>
   <template name="2m grid store column" value="&lt;column name=&quot;store_id&quot; class=&quot;Magento\Store\Ui\Component\Listing\Column\Store&quot;&gt;&#10;    &lt;argument name=&quot;data&quot; xsi:type=&quot;array&quot;&gt;&#10;        &lt;item name=&quot;config&quot; xsi:type=&quot;array&quot;&gt;&#10;            &lt;item name=&quot;bodyTmpl&quot; xsi:type=&quot;string&quot;&gt;ui/grid/cells/html&lt;/item&gt;&#10;            &lt;item name=&quot;sortable&quot; xsi:type=&quot;boolean&quot;&gt;false&lt;/item&gt;&#10;            &lt;item name=&quot;label&quot; xsi:type=&quot;string&quot; translate=&quot;true&quot;&gt;Store View&lt;/item&gt;&#10;        &lt;/item&gt;&#10;    &lt;/argument&gt;&#10;&lt;/column&gt;&#10;$END$" toReformat="false" toShortenFQNames="true">
     <context>
-      <option name="XSL_TEXT" value="true" />
       <option name="XML" value="true" />
-      <option name="XML_TEXT" value="true" />
     </context>
   </template>
   <template name="2m form fieldset" value="&lt;fieldset name=&quot;$FieldsetId$&quot;&gt;&#10;    &lt;argument name=&quot;data&quot; xsi:type=&quot;array&quot;&gt;&#10;        &lt;item name=&quot;config&quot; xsi:type=&quot;array&quot;&gt;&#10;            &lt;item name=&quot;label&quot; xsi:type=&quot;string&quot; translate=&quot;true&quot;&gt;$FieldsetTitle$&lt;/item&gt;&#10;        &lt;/item&gt;&#10;    &lt;/argument&gt;&#10;    &lt;!-- Add your fields here --&gt;&#10;    $END$&#10;&lt;/fieldset&gt;&#10;" toReformat="false" toShortenFQNames="true">
     <variable name="FieldsetId" expression="" defaultValue="" alwaysStopAt="true" />
     <variable name="FieldsetTitle" expression="" defaultValue="" alwaysStopAt="true" />
     <context>
-      <option name="XSL_TEXT" value="true" />
       <option name="XML" value="true" />
-      <option name="XML_TEXT" value="true" />
     </context>
   </template>
   <template name="2m form input field" value="&lt;field name=&quot;$fieldId$&quot;&gt;&#10;    &lt;argument name=&quot;data&quot; xsi:type=&quot;array&quot;&gt;&#10;        &lt;item name=&quot;config&quot; xsi:type=&quot;array&quot;&gt;&#10;            &lt;item name=&quot;visible&quot; xsi:type=&quot;boolean&quot;&gt;true&lt;/item&gt;&#10;            &lt;item name=&quot;dataType&quot; xsi:type=&quot;string&quot;&gt;text&lt;/item&gt;&#10;            &lt;item name=&quot;label&quot; xsi:type=&quot;string&quot;&gt;$fieldLabel$&lt;/item&gt;&#10;            &lt;item name=&quot;formElement&quot; xsi:type=&quot;string&quot;&gt;input&lt;/item&gt;&#10;            &lt;item name=&quot;source&quot; xsi:type=&quot;string&quot;&gt;$providerSource$&lt;/item&gt;&#10;        &lt;/item&gt;&#10;    &lt;/argument&gt;&#10;&lt;/field&gt;&#10;$END$" toReformat="false" toShortenFQNames="true">
@@ -89,9 +73,7 @@
     <variable name="fieldLabel" expression="" defaultValue="" alwaysStopAt="true" />
     <variable name="providerSource" expression="" defaultValue="main_fieldset" alwaysStopAt="true" />
     <context>
-      <option name="XSL_TEXT" value="true" />
       <option name="XML" value="true" />
-      <option name="XML_TEXT" value="true" />
     </context>
   </template>
   <template name="2m form select field" value="&lt;field name=&quot;$fieldId$&quot;&gt;&#10;    &lt;argument name=&quot;data&quot; xsi:type=&quot;array&quot;&gt;&#10;        &lt;item name=&quot;options&quot; xsi:type=&quot;object&quot;&gt;$UiComponent$&lt;/item&gt;&#10;        &lt;item name=&quot;config&quot; xsi:type=&quot;array&quot;&gt;&#10;            &lt;item name=&quot;label&quot; xsi:type=&quot;string&quot;&gt;$fieldLabel$&lt;/item&gt;&#10;            &lt;item name=&quot;dataType&quot; xsi:type=&quot;string&quot;&gt;text&lt;/item&gt;&#10;            &lt;item name=&quot;formElement&quot; xsi:type=&quot;string&quot;&gt;select&lt;/item&gt;&#10;            &lt;item name=&quot;source&quot; xsi:type=&quot;string&quot;&gt;$providerSource$&lt;/item&gt;&#10;        &lt;/item&gt;&#10;    &lt;/argument&gt;&#10;&lt;/field&gt;&#10;$END$" toReformat="false" toShortenFQNames="true">
@@ -100,9 +82,7 @@
     <variable name="fieldLabel" expression="" defaultValue="" alwaysStopAt="true" />
     <variable name="providerSource" expression="" defaultValue="main_fieldset" alwaysStopAt="true" />
     <context>
-      <option name="XSL_TEXT" value="true" />
       <option name="XML" value="true" />
-      <option name="XML_TEXT" value="true" />
     </context>
   </template>
   <template name="2m form date field" value="&lt;field name=&quot;$fieldId$&quot;&gt;&#10;    &lt;argument name=&quot;data&quot; xsi:type=&quot;array&quot;&gt;&#10;        &lt;item name=&quot;config&quot; xsi:type=&quot;array&quot;&gt;&#10;            &lt;item name=&quot;label&quot; xsi:type=&quot;string&quot;&gt;$FieldLabel$&lt;/item&gt;&#10;            &lt;item name=&quot;visible&quot; xsi:type=&quot;boolean&quot;&gt;true&lt;/item&gt;&#10;            &lt;item name=&quot;dataType&quot; xsi:type=&quot;string&quot;&gt;text&lt;/item&gt;&#10;            &lt;item name=&quot;formElement&quot; xsi:type=&quot;string&quot;&gt;date&lt;/item&gt;&#10;            &lt;item name=&quot;source&quot; xsi:type=&quot;string&quot;&gt;$providerSource$&lt;/item&gt;&#10;            &lt;item name=&quot;validation&quot; xsi:type=&quot;array&quot;&gt;&#10;                &lt;item name=&quot;validate-date&quot; xsi:type=&quot;boolean&quot;&gt;true&lt;/item&gt;&#10;            &lt;/item&gt;&#10;        &lt;/item&gt;&#10;    &lt;/argument&gt;&#10;&lt;/field&gt;&#10;$END$" toReformat="false" toShortenFQNames="true">
@@ -110,9 +90,7 @@
     <variable name="FieldLabel" expression="" defaultValue="" alwaysStopAt="true" />
     <variable name="providerSource" expression="" defaultValue="main_fieldset" alwaysStopAt="true" />
     <context>
-      <option name="XSL_TEXT" value="true" />
       <option name="XML" value="true" />
-      <option name="XML_TEXT" value="true" />
     </context>
   </template>
   <template name="2m widget param select" value="&lt;parameter name=&quot;$name$&quot; xsi:type=&quot;select&quot; source_model=&quot;$source$&quot; visible=&quot;true&quot; sort_order=&quot;$sortOrder$&quot; &gt;&#10;    &lt;label translate=&quot;true&quot;&gt;$label$&lt;/label&gt;&#10;&lt;/parameter&gt;&#10;$END$" toReformat="false" toShortenFQNames="true">
@@ -127,5 +105,30 @@
     <variable name="sortOrder" expression="" defaultValue="" alwaysStopAt="true" />
     <variable name="label" expression="" defaultValue="" alwaysStopAt="true" />
     <context />
+  </template>
+  <template name="2m javascript" value="&lt;script type=&quot;text/x-magento-init&quot;&gt;&#10;    {&#10;        &quot;*&quot;: {&#10;            &quot;$objectName$&quot;: {&#10;                &quot;$option1$&quot;: &quot;$value1$&quot;,&#10;                &quot;$option2$&quot;: &quot;$value2$&quot;&#10;            }&#10;        }&#10;    }&#10;&lt;/script&gt;" toReformat="false" toShortenFQNames="true">
+    <variable name="objectName" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="option1" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="value1" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="option2" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="value2" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="HTML" value="true" />
+    </context>
+  </template>
+  <template name="2m phpcs ignore block" value="//@codingStandardsIgnoreStart&#10;$SELECTION$&#10;//@codingStandardsIgnoreEnd" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="HTML" value="true" />
+      <option name="XML" value="true" />
+      <option name="CSS" value="true" />
+      <option name="JAVA_SCRIPT" value="true" />
+      <option name="SQL" value="true" />
+      <option name="PHP" value="true" />
+    </context>
+  </template>
+  <template name="2m phpcs ignore line" value="//@codingStandardsIgnoreLine" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="PHP" value="true" />
+    </context>
   </template>
 </templateSet>

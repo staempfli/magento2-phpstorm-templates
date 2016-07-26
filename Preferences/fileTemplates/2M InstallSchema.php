@@ -13,7 +13,7 @@ class ${NAME} implements InstallSchemaInterface
      */
     public function install(SchemaSetupInterface ${DS}setup, ModuleContextInterface ${DS}context)
     {
-        ${DS}installer = $setup;
+        ${DS}installer = ${DS}setup;
 
         ${DS}installer->startSetup();
 
