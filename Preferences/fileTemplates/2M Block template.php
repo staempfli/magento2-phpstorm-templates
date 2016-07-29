@@ -2,7 +2,7 @@
 #parse("stmpfl_variables.txt")
 #parse("stmpfl_header_php.php")
 
-use Magento\Framework\View\Element\Template;
+use Magento\Framework\View\Element\Template\Context;
 use Magento\Widget\Block\BlockInterface;
 
 class ${NAME} extends Template implements BlockInterface
@@ -12,10 +12,10 @@ class ${NAME} extends Template implements BlockInterface
     /**
      * Constructor
      *
-     * @param Template\Context ${DS}context
+     * @param Context ${DS}context
      * @param array ${DS}data
      */
-    public function __construct(Template\Context ${DS}context, array ${DS}data = [])
+    public function __construct(Context ${DS}context, array ${DS}data = [])
     {
         parent::__construct(${DS}context, ${DS}data);
     }

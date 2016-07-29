@@ -2,6 +2,11 @@
 #parse("stmpfl_variables.txt")
 #parse("stmpfl_header_php.php")
 
+use Magento\Framework\DB\Ddl\Table;
+use Magento\Framework\Setup\InstallSchemaInterface;
+use Magento\Framework\Setup\SchemaSetupInterface;
+use Magento\Framework\Setup\ModuleContextInterface;
+
 /**
  * @codeCoverageIgnore
  */

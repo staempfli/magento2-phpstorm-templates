@@ -131,4 +131,11 @@
       <option name="PHP" value="true" />
     </context>
   </template>
+  <template name="2m config save" value="$this-&gt;_resourceConfig-&gt;saveConfig('$path$', $value$, 'default', 0);" toReformat="false" toShortenFQNames="true">
+    <variable name="path" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="value" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="PHP" value="true" />
+    </context>
+  </template>
 </templateSet>
