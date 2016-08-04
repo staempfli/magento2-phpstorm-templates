@@ -1,4 +1,4 @@
-<templateSet group="Magento2">
+<templateSet group="StmpflMagento2">
   <template name="2m sequence" value="&lt;sequence&gt;&#10;    &lt;module name=&quot;$VendorName_ModuleName$&quot;/&gt;&#10;&lt;/sequence&gt;" toReformat="false" toShortenFQNames="true">
     <variable name="VendorName_ModuleName" expression="" defaultValue="" alwaysStopAt="true" />
     <context>

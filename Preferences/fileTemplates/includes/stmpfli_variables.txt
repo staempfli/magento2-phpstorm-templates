@@ -1,2 +1,2 @@
-#set($company = "<company_name>")
-#set($userEmail = "<user_email>")
+#set($company = "Staempfli AG")
+#set($userEmail = "juan.alonso@staempfli.com")
