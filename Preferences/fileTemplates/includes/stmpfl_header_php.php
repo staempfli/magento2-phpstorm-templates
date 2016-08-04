@@ -1,9 +1,6 @@
 /**
  * ${NAME}
  *
- * @project  ${PROJECT_NAME}
- * @copyright Copyright (c) ${YEAR} ${company} (${companyUrl})
+ * @copyright Copyright (c) ${YEAR} ${company}
  * @author    ${userEmail}
  */
- 
-namespace #[[$namespace$]]#;
