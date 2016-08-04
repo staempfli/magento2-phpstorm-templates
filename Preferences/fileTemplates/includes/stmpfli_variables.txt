@@ -1,2 +1,0 @@
-#set($company = "Staempfli AG")
-#set($userEmail = "juan.alonso@staempfli.com")

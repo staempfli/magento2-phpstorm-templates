@@ -48,4 +48,4 @@ For PHP classes template we need to use the default one because automatic Namesp
 
 ### Update Documentation
 
-`cd cd m2-phpstorm/Preferences/templates && echo 'cat //templateSet/template/@name' | xmllint --shell "Magento2.xml"`
+`cd cd m2-phpstorm/Preferences/templates && echo 'cat //templateSet/template/@name' | xmllint --shell "StmpflMagento2.xml"`
