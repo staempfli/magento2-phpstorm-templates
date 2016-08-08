@@ -1,11 +1,11 @@
 <templateSet group="StmpflMagento2">
-  <template name="2m sequence" value="&lt;sequence&gt;&#10;    &lt;module name=&quot;$VendorName_ModuleName$&quot;/&gt;&#10;&lt;/sequence&gt;" toReformat="false" toShortenFQNames="true">
+  <template name="2magento sequence" value="&lt;sequence&gt;&#10;    &lt;module name=&quot;$VendorName_ModuleName$&quot;/&gt;&#10;&lt;/sequence&gt;" toReformat="false" toShortenFQNames="true">
     <variable name="VendorName_ModuleName" expression="" defaultValue="" alwaysStopAt="true" />
     <context>
       <option name="XML" value="true" />
     </context>
   </template>
-  <template name="2m system section" value="&lt;section id=&quot;$section$&quot; translate=&quot;label&quot; type=&quot;text&quot; sortOrder=&quot;999&quot; showInDefault=&quot;1&quot; showInWebsite=&quot;0&quot; showInStore=&quot;0&quot;&gt;&#10;    &lt;label&gt;$section$&lt;/label&gt;&#10;    &lt;tab&gt;$tab$&lt;/tab&gt;&#10;    &lt;resource&gt;$resource$&lt;/resource&gt;&#10;    &lt;group id=&quot;$group$&quot; translate=&quot;label&quot; type=&quot;text&quot; sortOrder=&quot;1&quot; showInDefault=&quot;1&quot; showInWebsite=&quot;0&quot; showInStore=&quot;0&quot;&gt;&#10;        &lt;label&gt;$group$&lt;/label&gt;&#10;        &lt;field id=&quot;$field$&quot; translate=&quot;label&quot; type=&quot;$type$&quot; sortOrder=&quot;1&quot; showInDefault=&quot;1&quot; showInWebsite=&quot;0&quot; showInStore=&quot;0&quot;&gt;&#10;            &lt;label&gt;$field$&lt;/label&gt;&#10;        &lt;/field&gt;&#10;    &lt;/group&gt;&#10;&lt;/section&gt;" toReformat="false" toShortenFQNames="true">
+  <template name="2magento system section" value="&lt;section id=&quot;$section$&quot; translate=&quot;label&quot; type=&quot;text&quot; sortOrder=&quot;999&quot; showInDefault=&quot;1&quot; showInWebsite=&quot;0&quot; showInStore=&quot;0&quot;&gt;&#10;    &lt;label&gt;$section$&lt;/label&gt;&#10;    &lt;tab&gt;$tab$&lt;/tab&gt;&#10;    &lt;resource&gt;$resource$&lt;/resource&gt;&#10;    &lt;group id=&quot;$group$&quot; translate=&quot;label&quot; type=&quot;text&quot; sortOrder=&quot;1&quot; showInDefault=&quot;1&quot; showInWebsite=&quot;0&quot; showInStore=&quot;0&quot;&gt;&#10;        &lt;label&gt;$group$&lt;/label&gt;&#10;        &lt;field id=&quot;$field$&quot; translate=&quot;label&quot; type=&quot;$type$&quot; sortOrder=&quot;1&quot; showInDefault=&quot;1&quot; showInWebsite=&quot;0&quot; showInStore=&quot;0&quot;&gt;&#10;            &lt;label&gt;$field$&lt;/label&gt;&#10;        &lt;/field&gt;&#10;    &lt;/group&gt;&#10;&lt;/section&gt;" toReformat="false" toShortenFQNames="true">
     <variable name="section" expression="" defaultValue="" alwaysStopAt="true" />
     <variable name="tab" expression="" defaultValue="" alwaysStopAt="true" />
     <variable name="resource" expression="" defaultValue="" alwaysStopAt="true" />
@@ -16,7 +16,7 @@
       <option name="XML" value="true" />
     </context>
   </template>
-  <template name="2m admin menu active" value="$resultPage-&gt;setActiveMenu('$Menu$')&#10;        -&gt;addBreadcrumb(__('$breadcrum1$'), __('$breadcrum1$'))&#10;        -&gt;addBreadcrumb(__('$breadcrum2$'), __('$breadcrum2$'));&#10;$resultPage-&gt;getConfig()-&gt;getTitle()-&gt;prepend(__('$title$'));" toReformat="false" toShortenFQNames="true">
+  <template name="2magento admin menu active" value="$resultPage-&gt;setActiveMenu('$Menu$')&#10;        -&gt;addBreadcrumb(__('$breadcrum1$'), __('$breadcrum1$'))&#10;        -&gt;addBreadcrumb(__('$breadcrum2$'), __('$breadcrum2$'));&#10;$resultPage-&gt;getConfig()-&gt;getTitle()-&gt;prepend(__('$title$'));" toReformat="false" toShortenFQNames="true">
     <variable name="Menu" expression="" defaultValue="" alwaysStopAt="true" />
     <variable name="breadcrum1" expression="" defaultValue="" alwaysStopAt="true" />
     <variable name="breadcrum2" expression="" defaultValue="" alwaysStopAt="true" />
@@ -25,14 +25,14 @@
       <option name="PHP" value="true" />
     </context>
   </template>
-  <template name="2m grid text column" value="&lt;column name=&quot;$name$&quot;&gt;&#10;    &lt;argument name=&quot;data&quot; xsi:type=&quot;array&quot;&gt;&#10;        &lt;item name=&quot;config&quot; xsi:type=&quot;array&quot;&gt;&#10;            &lt;item name=&quot;filter&quot; xsi:type=&quot;string&quot;&gt;text&lt;/item&gt;&#10;            &lt;item name=&quot;editor&quot; xsi:type=&quot;array&quot;&gt;&#10;                &lt;item name=&quot;editorType&quot; xsi:type=&quot;string&quot;&gt;text&lt;/item&gt;&#10;                &lt;!-- validators here... --&gt;&#10;            &lt;/item&gt;&#10;            &lt;item name=&quot;label&quot; xsi:type=&quot;string&quot; translate=&quot;true&quot;&gt;$Title$&lt;/item&gt;&#10;            &lt;item name=&quot;visible&quot; xsi:type=&quot;boolean&quot;&gt;true&lt;/item&gt;&#10;        &lt;/item&gt;&#10;    &lt;/argument&gt;&#10;&lt;/column&gt;&#10;$END$" toReformat="false" toShortenFQNames="true">
+  <template name="2magento grid text column" value="&lt;column name=&quot;$name$&quot;&gt;&#10;    &lt;argument name=&quot;data&quot; xsi:type=&quot;array&quot;&gt;&#10;        &lt;item name=&quot;config&quot; xsi:type=&quot;array&quot;&gt;&#10;            &lt;item name=&quot;filter&quot; xsi:type=&quot;string&quot;&gt;text&lt;/item&gt;&#10;            &lt;item name=&quot;editor&quot; xsi:type=&quot;array&quot;&gt;&#10;                &lt;item name=&quot;editorType&quot; xsi:type=&quot;string&quot;&gt;text&lt;/item&gt;&#10;                &lt;!-- validators here... --&gt;&#10;            &lt;/item&gt;&#10;            &lt;item name=&quot;label&quot; xsi:type=&quot;string&quot; translate=&quot;true&quot;&gt;$Title$&lt;/item&gt;&#10;            &lt;item name=&quot;visible&quot; xsi:type=&quot;boolean&quot;&gt;true&lt;/item&gt;&#10;        &lt;/item&gt;&#10;    &lt;/argument&gt;&#10;&lt;/column&gt;&#10;$END$" toReformat="false" toShortenFQNames="true">
     <variable name="name" expression="" defaultValue="" alwaysStopAt="true" />
     <variable name="Title" expression="" defaultValue="" alwaysStopAt="true" />
     <context>
       <option name="XML" value="true" />
     </context>
   </template>
-  <template name="2m grid select column" value="&lt;column name=&quot;$name$&quot;&gt;&#10;    &lt;argument name=&quot;data&quot; xsi:type=&quot;array&quot;&gt;&#10;        &lt;item name=&quot;options&quot; xsi:type=&quot;object&quot;&gt;$sourceModel$&lt;/item&gt;&#10;        &lt;item name=&quot;config&quot; xsi:type=&quot;array&quot;&gt;&#10;            &lt;item name=&quot;filter&quot; xsi:type=&quot;string&quot;&gt;select&lt;/item&gt;&#10;            &lt;item name=&quot;component&quot; xsi:type=&quot;string&quot;&gt;Magento_Ui/js/grid/columns/select&lt;/item&gt;&#10;            &lt;item name=&quot;editor&quot; xsi:type=&quot;string&quot;&gt;select&lt;/item&gt;&#10;            &lt;item name=&quot;dataType&quot; xsi:type=&quot;string&quot;&gt;select&lt;/item&gt;&#10;            &lt;item name=&quot;label&quot; xsi:type=&quot;string&quot; translate=&quot;true&quot;&gt;$title$&lt;/item&gt;&#10;            &lt;item name=&quot;visible&quot; xsi:type=&quot;boolean&quot;&gt;true&lt;/item&gt;&#10;        &lt;/item&gt;&#10;    &lt;/argument&gt;&#10;&lt;/column&gt;&#10;$END$" toReformat="false" toShortenFQNames="true">
+  <template name="2magento grid select column" value="&lt;column name=&quot;$name$&quot;&gt;&#10;    &lt;argument name=&quot;data&quot; xsi:type=&quot;array&quot;&gt;&#10;        &lt;item name=&quot;options&quot; xsi:type=&quot;object&quot;&gt;$sourceModel$&lt;/item&gt;&#10;        &lt;item name=&quot;config&quot; xsi:type=&quot;array&quot;&gt;&#10;            &lt;item name=&quot;filter&quot; xsi:type=&quot;string&quot;&gt;select&lt;/item&gt;&#10;            &lt;item name=&quot;component&quot; xsi:type=&quot;string&quot;&gt;Magento_Ui/js/grid/columns/select&lt;/item&gt;&#10;            &lt;item name=&quot;editor&quot; xsi:type=&quot;string&quot;&gt;select&lt;/item&gt;&#10;            &lt;item name=&quot;dataType&quot; xsi:type=&quot;string&quot;&gt;select&lt;/item&gt;&#10;            &lt;item name=&quot;label&quot; xsi:type=&quot;string&quot; translate=&quot;true&quot;&gt;$title$&lt;/item&gt;&#10;            &lt;item name=&quot;visible&quot; xsi:type=&quot;boolean&quot;&gt;true&lt;/item&gt;&#10;        &lt;/item&gt;&#10;    &lt;/argument&gt;&#10;&lt;/column&gt;&#10;$END$" toReformat="false" toShortenFQNames="true">
     <variable name="name" expression="" defaultValue="" alwaysStopAt="true" />
     <variable name="sourceModel" expression="" defaultValue="" alwaysStopAt="true" />
     <variable name="title" expression="" defaultValue="" alwaysStopAt="true" />
@@ -40,14 +40,14 @@
       <option name="XML" value="true" />
     </context>
   </template>
-  <template name="2m grid date column" value="&lt;column name=&quot;$name$&quot; class=&quot;Magento\Ui\Component\Listing\Columns\Date&quot;&gt;&#10;    &lt;argument name=&quot;data&quot; xsi:type=&quot;array&quot;&gt;&#10;        &lt;item name=&quot;config&quot; xsi:type=&quot;array&quot;&gt;&#10;            &lt;item name=&quot;filter&quot; xsi:type=&quot;string&quot;&gt;dateRange&lt;/item&gt;&#10;            &lt;item name=&quot;component&quot; xsi:type=&quot;string&quot;&gt;Magento_Ui/js/grid/columns/date&lt;/item&gt;&#10;            &lt;item name=&quot;dataType&quot; xsi:type=&quot;string&quot;&gt;date&lt;/item&gt;&#10;            &lt;item name=&quot;label&quot; xsi:type=&quot;string&quot; translate=&quot;true&quot;&gt;$title$&lt;/item&gt;&#10;            &lt;item name=&quot;visible&quot; xsi:type=&quot;boolean&quot;&gt;true&lt;/item&gt;&#10;        &lt;/item&gt;&#10;    &lt;/argument&gt;&#10;&lt;/column&gt;&#10;$END$" toReformat="false" toShortenFQNames="true">
+  <template name="2magento grid date column" value="&lt;column name=&quot;$name$&quot; class=&quot;Magento\Ui\Component\Listing\Columns\Date&quot;&gt;&#10;    &lt;argument name=&quot;data&quot; xsi:type=&quot;array&quot;&gt;&#10;        &lt;item name=&quot;config&quot; xsi:type=&quot;array&quot;&gt;&#10;            &lt;item name=&quot;filter&quot; xsi:type=&quot;string&quot;&gt;dateRange&lt;/item&gt;&#10;            &lt;item name=&quot;component&quot; xsi:type=&quot;string&quot;&gt;Magento_Ui/js/grid/columns/date&lt;/item&gt;&#10;            &lt;item name=&quot;dataType&quot; xsi:type=&quot;string&quot;&gt;date&lt;/item&gt;&#10;            &lt;item name=&quot;label&quot; xsi:type=&quot;string&quot; translate=&quot;true&quot;&gt;$title$&lt;/item&gt;&#10;            &lt;item name=&quot;visible&quot; xsi:type=&quot;boolean&quot;&gt;true&lt;/item&gt;&#10;        &lt;/item&gt;&#10;    &lt;/argument&gt;&#10;&lt;/column&gt;&#10;$END$" toReformat="false" toShortenFQNames="true">
     <variable name="name" expression="" defaultValue="" alwaysStopAt="true" />
     <variable name="title" expression="" defaultValue="" alwaysStopAt="true" />
     <context>
       <option name="XML" value="true" />
     </context>
   </template>
-  <template name="2m grid store column" value="&lt;column name=&quot;store_id&quot; class=&quot;Magento\Store\Ui\Component\Listing\Column\Store&quot;&gt;&#10;    &lt;argument name=&quot;data&quot; xsi:type=&quot;array&quot;&gt;&#10;        &lt;item name=&quot;config&quot; xsi:type=&quot;array&quot;&gt;&#10;            &lt;item name=&quot;bodyTmpl&quot; xsi:type=&quot;string&quot;&gt;ui/grid/cells/html&lt;/item&gt;&#10;            &lt;item name=&quot;sortable&quot; xsi:type=&quot;boolean&quot;&gt;false&lt;/item&gt;&#10;            &lt;item name=&quot;label&quot; xsi:type=&quot;string&quot; translate=&quot;true&quot;&gt;Store View&lt;/item&gt;&#10;        &lt;/item&gt;&#10;    &lt;/argument&gt;&#10;&lt;/column&gt;&#10;$END$" toReformat="false" toShortenFQNames="true">
+  <template name="2magento grid store column" value="&lt;column name=&quot;store_id&quot; class=&quot;Magento\Store\Ui\Component\Listing\Column\Store&quot;&gt;&#10;    &lt;argument name=&quot;data&quot; xsi:type=&quot;array&quot;&gt;&#10;        &lt;item name=&quot;config&quot; xsi:type=&quot;array&quot;&gt;&#10;            &lt;item name=&quot;bodyTmpl&quot; xsi:type=&quot;string&quot;&gt;ui/grid/cells/html&lt;/item&gt;&#10;            &lt;item name=&quot;sortable&quot; xsi:type=&quot;boolean&quot;&gt;false&lt;/item&gt;&#10;            &lt;item name=&quot;label&quot; xsi:type=&quot;string&quot; translate=&quot;true&quot;&gt;Store View&lt;/item&gt;&#10;        &lt;/item&gt;&#10;    &lt;/argument&gt;&#10;&lt;/column&gt;&#10;$END$" toReformat="false" toShortenFQNames="true">
     <context>
       <option name="XML" value="true" />
     </context>
@@ -84,20 +84,24 @@
       <option name="XML" value="true" />
     </context>
   </template>
-  <template name="2m widget param select" value="&lt;parameter name=&quot;$name$&quot; xsi:type=&quot;select&quot; source_model=&quot;$source$&quot; visible=&quot;true&quot; sort_order=&quot;$sortOrder$&quot; &gt;&#10;    &lt;label translate=&quot;true&quot;&gt;$label$&lt;/label&gt;&#10;&lt;/parameter&gt;&#10;$END$" toReformat="false" toShortenFQNames="true">
+  <template name="2magento widget param select" value="&lt;parameter name=&quot;$name$&quot; xsi:type=&quot;select&quot; source_model=&quot;$source$&quot; visible=&quot;true&quot; sort_order=&quot;$sortOrder$&quot; &gt;&#10;    &lt;label translate=&quot;true&quot;&gt;$label$&lt;/label&gt;&#10;&lt;/parameter&gt;&#10;$END$" toReformat="false" toShortenFQNames="true">
     <variable name="name" expression="" defaultValue="" alwaysStopAt="true" />
     <variable name="source" expression="" defaultValue="" alwaysStopAt="true" />
     <variable name="sortOrder" expression="" defaultValue="" alwaysStopAt="true" />
     <variable name="label" expression="" defaultValue="" alwaysStopAt="true" />
-    <context />
+    <context>
+      <option name="XML" value="true" />
+    </context>
   </template>
-  <template name="2m widget param text" value="&lt;parameter name=&quot;$name$&quot; xsi:type=&quot;text&quot; visible=&quot;true&quot; sort_order=&quot;$sortOrder$&quot; &gt;&#10;    &lt;label translate=&quot;true&quot;&gt;$label$&lt;/label&gt;&#10;&lt;/parameter&gt;&#10;$END$" toReformat="false" toShortenFQNames="true">
+  <template name="2magento widget param text" value="&lt;parameter name=&quot;$name$&quot; xsi:type=&quot;text&quot; visible=&quot;true&quot; sort_order=&quot;$sortOrder$&quot; &gt;&#10;    &lt;label translate=&quot;true&quot;&gt;$label$&lt;/label&gt;&#10;&lt;/parameter&gt;&#10;$END$" toReformat="false" toShortenFQNames="true">
     <variable name="name" expression="" defaultValue="" alwaysStopAt="true" />
     <variable name="sortOrder" expression="" defaultValue="" alwaysStopAt="true" />
     <variable name="label" expression="" defaultValue="" alwaysStopAt="true" />
-    <context />
+    <context>
+      <option name="XML" value="true" />
+    </context>
   </template>
-  <template name="2m javascript" value="&lt;script type=&quot;text/x-magento-init&quot;&gt;&#10;    {&#10;        &quot;*&quot;: {&#10;            &quot;$objectName$&quot;: {&#10;                &quot;$option1$&quot;: &quot;$value1$&quot;,&#10;                &quot;$option2$&quot;: &quot;$value2$&quot;&#10;            }&#10;        }&#10;    }&#10;&lt;/script&gt;" toReformat="false" toShortenFQNames="true">
+  <template name="2magento javascript" value="&lt;script type=&quot;text/x-magento-init&quot;&gt;&#10;    {&#10;        &quot;*&quot;: {&#10;            &quot;$objectName$&quot;: {&#10;                &quot;$option1$&quot;: &quot;$value1$&quot;,&#10;                &quot;$option2$&quot;: &quot;$value2$&quot;&#10;            }&#10;        }&#10;    }&#10;&lt;/script&gt;" toReformat="false" toShortenFQNames="true">
     <variable name="objectName" expression="" defaultValue="" alwaysStopAt="true" />
     <variable name="option1" expression="" defaultValue="" alwaysStopAt="true" />
     <variable name="value1" expression="" defaultValue="" alwaysStopAt="true" />
@@ -107,7 +111,7 @@
       <option name="HTML" value="true" />
     </context>
   </template>
-  <template name="2m phpcs ignore block" value="//@codingStandardsIgnoreStart&#10;$SELECTION$&#10;//@codingStandardsIgnoreEnd" toReformat="false" toShortenFQNames="true">
+  <template name="2magento phpcs ignore block" value="//@codingStandardsIgnoreStart&#10;$SELECTION$&#10;//@codingStandardsIgnoreEnd" toReformat="false" toShortenFQNames="true">
     <context>
       <option name="HTML" value="true" />
       <option name="XML" value="true" />
@@ -117,19 +121,19 @@
       <option name="PHP" value="true" />
     </context>
   </template>
-  <template name="2m phpcs ignore line" value="//@codingStandardsIgnoreLine" toReformat="false" toShortenFQNames="true">
+  <template name="2magento phpcs ignore line" value="//@codingStandardsIgnoreLine" toReformat="false" toShortenFQNames="true">
     <context>
       <option name="PHP" value="true" />
     </context>
   </template>
-  <template name="2m config save" value="$this-&gt;_resourceConfig-&gt;saveConfig('$path$', $value$, 'default', 0);" toReformat="false" toShortenFQNames="true">
+  <template name="2magento config save" value="$this-&gt;_resourceConfig-&gt;saveConfig('$path$', $value$, 'default', 0);" toReformat="false" toShortenFQNames="true">
     <variable name="path" expression="" defaultValue="" alwaysStopAt="true" />
     <variable name="value" expression="" defaultValue="" alwaysStopAt="true" />
     <context>
       <option name="PHP" value="true" />
     </context>
   </template>
-  <template name="2m table new" value="/**&#10; * Create table '$table_name$'&#10; */&#10;$table = $setup-&gt;getConnection()-&gt;newTable(&#10;    $setup-&gt;getTable('$table_name$')&#10;)-&gt;addColumn(&#10;    '$id$',&#10;    Table::TYPE_SMALLINT,&#10;    null,&#10;    ['identity' =&gt; true, 'nullable' =&gt; false, 'primary' =&gt; true],&#10;    '$id$'&#10;)-&gt;addIndex(&#10;    $setup-&gt;getIdxName('$table_name$', ['$id$']),&#10;    ['$id$']&#10;)-&gt;setComment(&#10;    '$description$'&#10;);&#10;&#10;// More columns here&#10;$END$&#10;&#10;$setup-&gt;getConnection()-&gt;createTable($table);" description="New table for setup script" toReformat="false" toShortenFQNames="true">
+  <template name="2magento table new" value="/**&#10; * Create table '$table_name$'&#10; */&#10;$table = $setup-&gt;getConnection()-&gt;newTable(&#10;    $setup-&gt;getTable('$table_name$')&#10;)-&gt;addColumn(&#10;    '$id$',&#10;    Table::TYPE_SMALLINT,&#10;    null,&#10;    ['identity' =&gt; true, 'nullable' =&gt; false, 'primary' =&gt; true],&#10;    '$id$'&#10;)-&gt;addIndex(&#10;    $setup-&gt;getIdxName('$table_name$', ['$id$']),&#10;    ['$id$']&#10;)-&gt;setComment(&#10;    '$description$'&#10;);&#10;&#10;// More columns here&#10;$END$&#10;&#10;$setup-&gt;getConnection()-&gt;createTable($table);" description="New table for setup script" toReformat="false" toShortenFQNames="true">
     <variable name="table_name" expression="" defaultValue="table_name" alwaysStopAt="true" />
     <variable name="id" expression="" defaultValue="id" alwaysStopAt="true" />
     <variable name="description" expression="" defaultValue="Some description" alwaysStopAt="true" />
@@ -137,7 +141,7 @@
       <option name="PHP" value="true" />
     </context>
   </template>
-  <template name="2m table column" value="$table-&gt;addColumn(&#10;    '$fieldName$',&#10;    Table::TYPE_$type$,&#10;    null,&#10;    ['nullable' =&gt; true, 'default' =&gt; '$defaultValue$'],&#10;    '$fieldName$'&#10;);&#10;&#10;$END$" description="Add column to table" toReformat="false" toShortenFQNames="true">
+  <template name="2magento table column" value="$table-&gt;addColumn(&#10;    '$fieldName$',&#10;    Table::TYPE_$type$,&#10;    null,&#10;    ['nullable' =&gt; true, 'default' =&gt; '$defaultValue$'],&#10;    '$fieldName$'&#10;);&#10;&#10;$END$" description="Add column to table" toReformat="false" toShortenFQNames="true">
     <variable name="fieldName" expression="" defaultValue="field_name" alwaysStopAt="true" />
     <variable name="type" expression="" defaultValue="" alwaysStopAt="true" />
     <variable name="defaultValue" expression="" defaultValue="" alwaysStopAt="true" />
@@ -145,7 +149,7 @@
       <option name="PHP" value="true" />
     </context>
   </template>
-  <template name="2m table foreignKey" value="&#10;$table-&gt;addColumn(&#10;    '$currentId$',&#10;    Table::TYPE_$type$,&#10;    null,&#10;    ['nullable' =&gt; false, 'primary' =&gt; true],&#10;    'Foreign Key $currentId$'&#10;)-&gt;addForeignKey(&#10;    $setup-&gt;getFkName('$currentTable$', '$currentId$', '$foreignTable$', '$foreignId$'),&#10;    '$currentId$',&#10;    $setup-&gt;getTable('$foreignTable$'),&#10;    '$foreignId$',&#10;    Table::ACTION_$actionType$&#10;);&#10;&#10;$END$" description="Add foreign key to table" toReformat="false" toShortenFQNames="true">
+  <template name="2magento table foreignKey" value="&#10;$table-&gt;addColumn(&#10;    '$currentId$',&#10;    Table::TYPE_$type$,&#10;    null,&#10;    ['nullable' =&gt; false, 'primary' =&gt; true],&#10;    'Foreign Key $currentId$'&#10;)-&gt;addForeignKey(&#10;    $setup-&gt;getFkName('$currentTable$', '$currentId$', '$foreignTable$', '$foreignId$'),&#10;    '$currentId$',&#10;    $setup-&gt;getTable('$foreignTable$'),&#10;    '$foreignId$',&#10;    Table::ACTION_$actionType$&#10;);&#10;&#10;$END$" description="Add foreign key to table" toReformat="false" toShortenFQNames="true">
     <variable name="currentId" expression="" defaultValue="current_id" alwaysStopAt="true" />
     <variable name="type" expression="" defaultValue="" alwaysStopAt="true" />
     <variable name="currentTable" expression="" defaultValue="current_table" alwaysStopAt="true" />
@@ -184,6 +188,48 @@
     <variable name="source" expression="" defaultValue="" alwaysStopAt="true" />
     <context>
       <option name="XML" value="true" />
+    </context>
+  </template>
+  <template name="2magento widget xml" value="&lt;widgets xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot; xsi:noNamespaceSchemaLocation=&quot;urn:magento:module:Magento_Widget:etc/widget.xsd&quot;&gt;&#10;    &lt;widget id=&quot;$widgetId$&quot; class=&quot;$class$&quot;&gt;&#10;        &lt;label translate=&quot;true&quot;&gt;$label$&lt;/label&gt;&#10;        &lt;description&gt;$description$&lt;/description&gt;&#10;        &lt;parameters&gt;&#10;            $END$&#10;        &lt;/parameters&gt;&#10;    &lt;/widget&gt;&#10;&lt;/widgets&gt;" toReformat="false" toShortenFQNames="true">
+    <variable name="widgetId" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="class" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="label" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="description" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="XML" value="true" />
+    </context>
+  </template>
+  <template name="2magento block" value="use Magento\Framework\View\Element\Template;&#10;use Magento\Widget\Block\BlockInterface;&#10;&#10;class $class$ extends Template implements BlockInterface&#10;{&#10;    /**&#10;     * @var string $_template&#10;     */&#10;    protected $_template = &quot;$template$.phtml&quot;;&#10;&#10;    // write your methods here...&#10;}" toReformat="false" toShortenFQNames="true">
+    <variable name="class" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="template" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="PHP" value="true" />
+    </context>
+  </template>
+  <template name="2magento source option" value="use Magento\Framework\Data\OptionSourceInterface;&#10;use Magento\Framework\Option\ArrayInterface;&#10;&#10;class $class$ implements OptionSourceInterface, ArrayInterface&#10;{&#10;    /**&#10;     * @var array $options&#10;     */&#10;    protected $options;&#10;&#10;    /**&#10;     * Category Options&#10;     *&#10;     * @return array&#10;     */&#10;    public function toOptionArray()&#10;    {&#10;        if ($this-&gt;options == null) {&#10;            $this-&gt;options = ['value' =&gt; '', 'label' =&gt; ''];      &#10;        }&#10;&#10;        return $this-&gt;options;&#10;    }&#10;}" toReformat="false" toShortenFQNames="true">
+    <variable name="class" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="PHP" value="true" />
+    </context>
+  </template>
+  <template name="2magento layout" value="&lt;page xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot; layout=&quot;$layout$&quot; xsi:noNamespaceSchemaLocation=&quot;urn:magento:framework:View/Layout/etc/page_configuration.xsd&quot;&gt;&#10;    &lt;body&gt;&#10;        $END$&#10;    &lt;/body&gt;&#10;&lt;/page&gt;" toReformat="false" toShortenFQNames="true">
+    <variable name="layout" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="XML" value="true" />
+    </context>
+  </template>
+  <template name="2magento requirejs-config" value="var config = {&#10;    map: {&#10;        '*': {&#10;            ${objectName}: '$vendor$_$package$/js/$jsFileName$'&#10;        }&#10;    }&#10;};&#10;" toReformat="false" toShortenFQNames="true">
+    <variable name="vendor" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="package" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="jsFileName" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="JAVA_SCRIPT" value="true" />
+    </context>
+  </template>
+  <template name="2magento js class" value="/*jshint jquery:true*/&#10;define([&#10;    &quot;jquery&quot;,&#10;    &quot;jquery/ui&quot;&#10;], function($){&#10;    &quot;use strict&quot;;&#10;&#10;    $.widget('$widgetName$', {&#10;        options: {&#10;            // optionName: value&#10;        },&#10;&#10;        /**&#10;         * Bind a click handler on the widget's element.&#10;         * @private&#10;         */&#10;        _create: function() {&#10;            this.element.on('click', $.proxy(this._clickAction, this));&#10;        },&#10;&#10;        /**&#10;         * Init object&#10;         * @private&#10;         */&#10;        _init: function () {&#10;            // Do something if needed&#10;        },&#10;&#10;        /**&#10;         * Click action function&#10;         * @private&#10;         * @param event - {Object} - Click event.&#10;         */&#10;        _clickAction: function(event) {&#10;            // Do something with element clicked $(event.target)&#10;        }&#10;    });&#10;    &#10;    return $.$widgetName$;&#10;});" toReformat="false" toShortenFQNames="true">
+    <variable name="widgetName" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="JAVA_SCRIPT" value="true" />
     </context>
   </template>
 </templateSet>
