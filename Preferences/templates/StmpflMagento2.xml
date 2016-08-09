@@ -232,4 +232,76 @@
       <option name="JAVA_SCRIPT" value="true" />
     </context>
   </template>
+  <template name="2magento acl xml" value="&lt;config xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot; xsi:noNamespaceSchemaLocation=&quot;urn:magento:framework:Acl/etc/acl.xsd&quot;&gt;&#10;    &lt;acl&gt;&#10;        &lt;resources&gt;&#10;            &lt;resource id=&quot;Magento_Backend::admin&quot;&gt;&#10;               $END$&#10;            &lt;/resource&gt;&#10;        &lt;/resources&gt;&#10;    &lt;/acl&gt;&#10;&lt;/config&gt;&#10;" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="XML" value="true" />
+    </context>
+  </template>
+  <template name="2magento config xml" value="&lt;config xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot; xsi:noNamespaceSchemaLocation=&quot;urn:magento:module:Magento_Store:etc/config.xsd&quot;&gt;&#10;    &lt;default&gt;&#10;        $END$&#10;    &lt;/default&gt;&#10;&lt;/config&gt;" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="XML" value="true" />
+    </context>
+  </template>
+  <template name="2magento Controller Admin" value="use Magento\Backend\App\Action;&#10;use Magento\Backend\App\Action\Context;&#10;use Magento\Framework\View\Result\PageFactory;&#10;&#10;&#10;class $className$ extends Action&#10;{&#10;    /**&#10;     * @var PageFactory&#10;     */&#10;    protected $resultPageFactory;&#10;&#10;    /**&#10;     * @param Context $context&#10;     * @param PageFactory $resultPageFactory&#10;     */&#10;    public function __construct(&#10;        Context $context,&#10;        PageFactory $resultPageFactory&#10;    ) {&#10;        parent::__construct($context);&#10;        $this-&gt;resultPageFactory = $resultPageFactory;&#10;    }&#10;&#10;    /**&#10;     * Check the permission to run it&#10;     *&#10;     * @return boolean&#10;     */&#10;    protected function _isAllowed()&#10;    {&#10;        return $this-&gt;_authorization-&gt;isAllowed('$acl$');&#10;    }&#10;&#10;    /**&#10;     * Index action&#10;     *&#10;     * @return \Magento\Backend\Model\View\Result\Page&#10;     */&#10;    public function execute()&#10;    {&#10;        /** @var \Magento\Backend\Model\View\Result\Page $resultPage */&#10;        $resultPage = $this-&gt;resultPageFactory-&gt;create();&#10;&#10;        return $resultPage;&#10;    }&#10;}&#10;" toReformat="false" toShortenFQNames="true">
+    <variable name="className" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="acl" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="PHP" value="true" />
+    </context>
+  </template>
+  <template name="2magento Controller Front" value="use Magento\Framework\App\Action\Action;&#10;use Magento\Framework\View\Result\PageFactory;&#10;use Magento\Framework\App\Action\Context;&#10;&#10;class $className$ extends Action&#10;{&#10;    /**&#10;     * @var PageFactory&#10;     */&#10;    protected $pageFactory;&#10;&#10;    /**&#10;     * @param Context $context&#10;     * @param PageFactory $pageFactory&#10;     */&#10;    public function __construct(Context $context, PageFactory $pageFactory)&#10;    {&#10;        $this-&gt;pageFactory = $pageFactory;&#10;        return parent::__construct($context);&#10;    }&#10;&#10;    /**&#10;     * Index Action&#10;     * &#10;     * @return \Magento\Framework\View\Result\Page&#10;     */&#10;    public function execute()&#10;    {&#10;        /** @var \Magento\Framework\View\Result\Page $resultPage */&#10;        $resultPage = $this-&gt;pageFactory-&gt;create();&#10;        return $resultPage;&#10;    }&#10;}" toReformat="false" toShortenFQNames="true">
+    <variable name="className" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="PHP" value="true" />
+    </context>
+  </template>
+  <template name="2magento di xml" value="&lt;config xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot; xsi:noNamespaceSchemaLocation=&quot;urn:magento:framework:ObjectManager/etc/config.xsd&quot;&gt;&#10;   $END$&#10;&lt;/config&gt;" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="XML" value="true" />
+    </context>
+  </template>
+  <template name="2magento events xml" value="&lt;config xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot; xsi:noNamespaceSchemaLocation=&quot;urn:magento:framework:Event/etc/events.xsd&quot;&gt;&#10;    &lt;event name=&quot;$event$&quot;&gt;&#10;        &lt;observer name=&quot;$observer$_$event$&quot; instance=&quot;$class$&quot; shared=&quot;false&quot;/&gt;&#10;    &lt;/event&gt;&#10;&lt;/config&gt;" toReformat="false" toShortenFQNames="true">
+    <variable name="event" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="observer" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="class" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="XML" value="true" />
+    </context>
+  </template>
+  <template name="2magento helper" value="use Magento\Framework\App\Helper\AbstractHelper;&#10;&#10;class $className$ extends AbstractHelper&#10;{&#10;    $END$&#10;}" toReformat="false" toShortenFQNames="true">
+    <variable name="className" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="PHP" value="true" />
+    </context>
+  </template>
+  <template name="2magento Schema Install" value="use Magento\Framework\DB\Ddl\Table;&#10;use Magento\Framework\Setup\InstallSchemaInterface;&#10;use Magento\Framework\Setup\SchemaSetupInterface;&#10;use Magento\Framework\Setup\ModuleContextInterface;&#10;&#10;/**&#10; * @codeCoverageIgnore&#10; */&#10;class $className$ implements InstallSchemaInterface&#10;{&#10;    /**&#10;     * {@inheritdoc}&#10;     * @SuppressWarnings(PHPMD.ExcessiveMethodLength)&#10;     */&#10;    public function install(SchemaSetupInterface $setup, ModuleContextInterface $context)&#10;    {&#10;        $installer = ${DS}setup;&#10;&#10;        $installer-&gt;startSetup();&#10;&#10;        // Install actions here...&#10;        $END$&#10;&#10;        $installer-&gt;endSetup();&#10;    }&#10;}" toReformat="false" toShortenFQNames="true">
+    <variable name="className" expression="" defaultValue="" alwaysStopAt="true" />
+    <context />
+  </template>
+  <template name="2magento menu xml" value="&lt;config xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot; xsi:noNamespaceSchemaLocation=&quot;urn:magento:module:Magento_Backend:etc/menu.xsd&quot;&gt;&#10;    &lt;menu&gt;&#10;        $END$&#10;    &lt;/menu&gt;&#10;&lt;/config&gt;" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="XML" value="true" />
+    </context>
+  </template>
+  <template name="2magento module xml" value="&lt;config xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot; xsi:noNamespaceSchemaLocation=&quot;urn:magento:framework:Module/etc/module.xsd&quot;&gt;&#10;    &lt;module name=&quot;$VendorName$_$ModuleName$&quot; setup_version=&quot;0.0.1&quot; &gt;&#10;        $END$&#10;    &lt;/module&gt;&#10;&lt;/config&gt;" toReformat="false" toShortenFQNames="true">
+    <variable name="VendorName" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="ModuleName" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="XML" value="true" />
+    </context>
+  </template>
+  <template name="2magento routes xml" value="&lt;config xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot; xsi:noNamespaceSchemaLocation=&quot;urn:magento:framework:App/etc/routes.xsd&quot;&gt;&#10;    &lt;router id=&quot;$type$&quot;&gt; &lt;!-- Standard or Admin --&gt;&#10;        &lt;route id=&quot;$name$&quot; frontName=&quot;$name$&quot;&gt;&#10;            &lt;module name=&quot;$VendorName$_$ModuleName$&quot; /&gt;&#10;        &lt;/route&gt;&#10;    &lt;/router&gt;&#10;&lt;/config&gt;" toReformat="false" toShortenFQNames="true">
+    <variable name="type" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="name" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="VendorName" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="ModuleName" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="XML" value="true" />
+    </context>
+  </template>
+  <template name="2magento system xml" value="&lt;config xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot; xsi:noNamespaceSchemaLocation=&quot;urn:magento:module:Magento_Config:etc/system_file.xsd&quot;&gt;&#10;    &lt;system&gt;&#10;        $END$&#10;    &lt;/system&gt;&#10;&lt;/config&gt;" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="XML" value="true" />
+    </context>
+  </template>
 </templateSet>

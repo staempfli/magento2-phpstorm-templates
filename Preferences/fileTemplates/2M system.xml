@@ -1,7 +1,0 @@
-#parse("stmpfl_variables.txt")
-#parse("stmpfl_header_xml.xml")
-<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Config:etc/system_file.xsd">
-    <system>
-        
-    </system>
-</config>
