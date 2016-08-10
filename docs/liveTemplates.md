@@ -37,8 +37,15 @@
 * 2magento di xml
 * 2magento events xml
 * 2magento helper
-* 2magento Schema Install
+* 2magento InstallSchema
 * 2magento menu xml
 * 2magento module xml
 * 2magento routes xml
 * 2magento system xml
+* 2magento InstallData
+* 2magento eav text attribute
+* 2magento eav textarea attribute
+* 2magento eav boolean attribute
+* 2magento eav date attribute
+* 2magento field validation
+* 2magento field boolean

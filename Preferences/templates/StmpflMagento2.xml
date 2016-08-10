@@ -160,11 +160,9 @@
       <option name="PHP" value="true" />
     </context>
   </template>
-  <template name="2magento field file" value="&lt;field name=&quot;$fieldName$&quot;&gt;&#10;    &lt;argument name=&quot;data&quot; xsi:type=&quot;array&quot;&gt;&#10;        &lt;item name=&quot;config&quot; xsi:type=&quot;array&quot;&gt;&#10;            &lt;!--&lt;item name=&quot;label&quot; xsi:type=&quot;string&quot;&gt;File&lt;/item&gt;--&gt;&#10;            &lt;item name=&quot;formElement&quot; xsi:type=&quot;string&quot;&gt;fileUploader&lt;/item&gt;&#10;            &lt;item name=&quot;componentType&quot; xsi:type=&quot;string&quot;&gt;fileUploader&lt;/item&gt;&#10;            &lt;item name=&quot;notice&quot; xsi:type=&quot;string&quot; translate=&quot;true&quot;&gt;Allowed file types: jpeg, gif, png&lt;/item&gt;&#10;            &lt;item name=&quot;maxFileSize&quot; xsi:type=&quot;number&quot;&gt;2097152&lt;/item&gt;&#10;            &lt;item name=&quot;allowedExtensions&quot; xsi:type=&quot;string&quot;&gt;jpg jpeg gif png&lt;/item&gt;&#10;            &lt;item name=&quot;uploaderConfig&quot; xsi:type=&quot;array&quot;&gt;&#10;                &lt;item name=&quot;url&quot; xsi:type=&quot;string&quot;&gt;$routeId$/$controller$/$action$&lt;/item&gt;&#10;            &lt;/item&gt;&#10;            &lt;item name=&quot;sortOrder&quot; xsi:type=&quot;string&quot;&gt;10&lt;/item&gt;&#10;        &lt;/item&gt;&#10;    &lt;/argument&gt;&#10;&lt;/field&gt;&#10;$END$" toReformat="false" toShortenFQNames="true">
+  <template name="2magento field file" value="&lt;field name=&quot;$fieldName$&quot;&gt;&#10;    &lt;argument name=&quot;data&quot; xsi:type=&quot;array&quot;&gt;&#10;        &lt;item name=&quot;config&quot; xsi:type=&quot;array&quot;&gt;&#10;            &lt;!--&lt;item name=&quot;label&quot; xsi:type=&quot;string&quot;&gt;File&lt;/item&gt;--&gt;&#10;            &lt;item name=&quot;formElement&quot; xsi:type=&quot;string&quot;&gt;fileUploader&lt;/item&gt;&#10;            &lt;item name=&quot;componentType&quot; xsi:type=&quot;string&quot;&gt;fileUploader&lt;/item&gt;&#10;            &lt;item name=&quot;notice&quot; xsi:type=&quot;string&quot; translate=&quot;true&quot;&gt;Allowed file types: jpeg, gif, png&lt;/item&gt;&#10;            &lt;item name=&quot;maxFileSize&quot; xsi:type=&quot;number&quot;&gt;2097152&lt;/item&gt;&#10;            &lt;item name=&quot;allowedExtensions&quot; xsi:type=&quot;string&quot;&gt;jpg jpeg gif png&lt;/item&gt;&#10;            &lt;item name=&quot;uploaderConfig&quot; xsi:type=&quot;array&quot;&gt;&#10;                &lt;item name=&quot;url&quot; xsi:type=&quot;string&quot;&gt;$routeId$/file/uploader&lt;/item&gt;&#10;            &lt;/item&gt;&#10;            &lt;item name=&quot;sortOrder&quot; xsi:type=&quot;string&quot;&gt;10&lt;/item&gt;&#10;        &lt;/item&gt;&#10;    &lt;/argument&gt;&#10;&lt;/field&gt;&#10;$END$" toReformat="false" toShortenFQNames="true">
     <variable name="fieldName" expression="" defaultValue="" alwaysStopAt="true" />
     <variable name="routeId" expression="" defaultValue="" alwaysStopAt="true" />
-    <variable name="controller" expression="" defaultValue="" alwaysStopAt="true" />
-    <variable name="action" expression="" defaultValue="" alwaysStopAt="true" />
     <context>
       <option name="XML" value="true" />
     </context>
@@ -274,7 +272,7 @@
       <option name="PHP" value="true" />
     </context>
   </template>
-  <template name="2magento Schema Install" value="use Magento\Framework\DB\Ddl\Table;&#10;use Magento\Framework\Setup\InstallSchemaInterface;&#10;use Magento\Framework\Setup\SchemaSetupInterface;&#10;use Magento\Framework\Setup\ModuleContextInterface;&#10;&#10;/**&#10; * @codeCoverageIgnore&#10; */&#10;class $className$ implements InstallSchemaInterface&#10;{&#10;    /**&#10;     * {@inheritdoc}&#10;     * @SuppressWarnings(PHPMD.ExcessiveMethodLength)&#10;     */&#10;    public function install(SchemaSetupInterface $setup, ModuleContextInterface $context)&#10;    {&#10;        $installer = ${DS}setup;&#10;&#10;        $installer-&gt;startSetup();&#10;&#10;        // Install actions here...&#10;        $END$&#10;&#10;        $installer-&gt;endSetup();&#10;    }&#10;}" toReformat="false" toShortenFQNames="true">
+  <template name="2magento InstallSchema" value="use Magento\Framework\DB\Ddl\Table;&#10;use Magento\Framework\Setup\InstallSchemaInterface;&#10;use Magento\Framework\Setup\SchemaSetupInterface;&#10;use Magento\Framework\Setup\ModuleContextInterface;&#10;&#10;/**&#10; * @codeCoverageIgnore&#10; */&#10;class $className$ implements InstallSchemaInterface&#10;{&#10;    /**&#10;     * {@inheritdoc}&#10;     * @SuppressWarnings(PHPMD.ExcessiveMethodLength)&#10;     */&#10;    public function install(SchemaSetupInterface $setup, ModuleContextInterface $context)&#10;    {&#10;        $installer = ${DS}setup;&#10;&#10;        $installer-&gt;startSetup();&#10;&#10;        // Install actions here...&#10;        $END$&#10;&#10;        $installer-&gt;endSetup();&#10;    }&#10;}" toReformat="false" toShortenFQNames="true">
     <variable name="className" expression="" defaultValue="" alwaysStopAt="true" />
     <context />
   </template>
@@ -300,6 +298,64 @@
     </context>
   </template>
   <template name="2magento system xml" value="&lt;config xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot; xsi:noNamespaceSchemaLocation=&quot;urn:magento:module:Magento_Config:etc/system_file.xsd&quot;&gt;&#10;    &lt;system&gt;&#10;        $END$&#10;    &lt;/system&gt;&#10;&lt;/config&gt;" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="XML" value="true" />
+    </context>
+  </template>
+  <template name="2magento InstallData" value="use Magento\Framework\Setup\InstallDataInterface;&#10;use Magento\Framework\Setup\ModuleContextInterface;&#10;use Magento\Framework\Setup\ModuleDataSetupInterface;&#10;&#10;/**&#10; * @codeCoverageIgnore&#10; */&#10;class InstallData implements InstallDataInterface&#10;{&#10;    /**&#10;     * {@inheritdoc}&#10;     * @SuppressWarnings(PHPMD.ExcessiveMethodLength)&#10;     */&#10;    public function install(ModuleDataSetupInterface $setup, ModuleContextInterface $context)&#10;    {&#10;        $setup-&gt;startSetup();&#10;&#10;        // Install here your data...&#10;        $END$&#10;&#10;        $setup-&gt;endSetup();&#10;    }&#10;}&#10;" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="PHP" value="true" />
+    </context>
+  </template>
+  <template name="2magento eav text attribute" value="$attributes['$fieldName$'] = [&#10;    'type' =&gt; 'varchar',&#10;    'label' =&gt; '$capitalizedFieldName$',&#10;    'input' =&gt; 'text',&#10;    'required' =&gt; $required$, //true/false&#10;    'sort_order' =&gt; $position$,&#10;    'global' =&gt; ScopedAttributeInterface::$scope$,&#10;    'group' =&gt; 'General',&#10;    //'validate_rules' =&gt; 'a:2:{s:15:&quot;max_text_length&quot;;i:255;s:15:&quot;min_text_length&quot;;i:1;}',&#10;];" toReformat="false" toShortenFQNames="true">
+    <variable name="fieldName" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="capitalizedFieldName" expression="capitalize(fieldName)" defaultValue="" alwaysStopAt="false" />
+    <variable name="required" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="position" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="scope" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="PHP" value="true" />
+    </context>
+  </template>
+  <template name="2magento eav textarea attribute" value="$attributes['$fieldName$'] = [&#10;    'type' =&gt; 'text',&#10;    'label' =&gt; '$capitalizedFieldName$',&#10;    'input' =&gt; 'textarea',&#10;    'required' =&gt; $required$, //true/false&#10;    'sort_order' =&gt; $position$,&#10;    'global' =&gt; ScopedAttributeInterface::$scope$,&#10;    'group' =&gt; 'General',&#10;    'wysiwyg_enabled =&gt; true,&#10;];" toReformat="false" toShortenFQNames="true">
+    <variable name="fieldName" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="capitalizedFieldName" expression="capitalize(fieldName)" defaultValue="" alwaysStopAt="false" />
+    <variable name="required" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="position" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="scope" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="PHP" value="true" />
+    </context>
+  </template>
+  <template name="2magento eav boolean attribute" value="$attributes['$fieldName$'] = [&#10;    'type' =&gt; 'int',&#10;    'label' =&gt; '$capitalizedFieldName$',&#10;    'input' =&gt; 'select',&#10;    'source' =&gt; 'Magento\Eav\Model\Entity\Attribute\Source\Boolean',&#10;    'required' =&gt; $required$, //true/false&#10;    'sort_order' =&gt; $position$,&#10;    'global' =&gt; ScopedAttributeInterface::$scope$,&#10;    'group' =&gt; 'General',&#10;];" toReformat="false" toShortenFQNames="true">
+    <variable name="fieldName" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="capitalizedFieldName" expression="capitalize(fieldName)" defaultValue="" alwaysStopAt="false" />
+    <variable name="required" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="position" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="scope" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="PHP" value="true" />
+    </context>
+  </template>
+  <template name="2magento eav date attribute" value="$attributes['$fieldName$'] = [&#10;    'type' =&gt; 'datetime',&#10;    'label' =&gt; '$capitalizedFieldName$',&#10;    'input' =&gt; 'date',&#10;    'backend' =&gt; 'Magento\Eav\Model\Entity\Attribute\Backend\Datetime',&#10;    'required' =&gt; $required$, //true/false&#10;    'sort_order' =&gt; $position$,&#10;    'global' =&gt; ScopedAttributeInterface::$scope$,&#10;    'group' =&gt; 'General',&#10;];" toReformat="false" toShortenFQNames="true">
+    <variable name="fieldName" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="capitalizedFieldName" expression="capitalize(fieldName)" defaultValue="" alwaysStopAt="false" />
+    <variable name="required" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="position" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="scope" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="PHP" value="true" />
+    </context>
+  </template>
+  <template name="2magento field validation" value="&lt;item name=&quot;validation&quot; xsi:type=&quot;array&quot;&gt;&#10;    &lt;item name=&quot;required-entry&quot; xsi:type=&quot;array&quot;&gt;true&lt;/item&gt;&#10;&lt;/item&gt;" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="XML" value="true" />
+    </context>
+  </template>
+  <template name="2magento field boolean" value="&lt;field name=&quot;$fieldName$&quot;&gt;&#10;    &lt;argument name=&quot;data&quot; xsi:type=&quot;array&quot;&gt;&#10;        &lt;item name=&quot;config&quot; xsi:type=&quot;array&quot;&gt;&#10;            &lt;item name=&quot;sortOrder&quot; xsi:type=&quot;number&quot;&gt;10&lt;/item&gt;&#10;            &lt;item name=&quot;dataType&quot; xsi:type=&quot;string&quot;&gt;boolean&lt;/item&gt;&#10;            &lt;item name=&quot;formElement&quot; xsi:type=&quot;string&quot;&gt;checkbox&lt;/item&gt;&#10;            &lt;item name=&quot;source&quot; xsi:type=&quot;string&quot;&gt;$source$&lt;/item&gt;&#10;            &lt;item name=&quot;prefer&quot; xsi:type=&quot;string&quot;&gt;toggle&lt;/item&gt;&#10;            &lt;item name=&quot;label&quot; xsi:type=&quot;string&quot; translate=&quot;true&quot;&gt;$label$&lt;/item&gt;&#10;            &lt;item name=&quot;valueMap&quot; xsi:type=&quot;array&quot;&gt;&#10;                &lt;item name=&quot;true&quot; xsi:type=&quot;string&quot;&gt;1&lt;/item&gt;&#10;                &lt;item name=&quot;false&quot; xsi:type=&quot;string&quot;&gt;0&lt;/item&gt;&#10;            &lt;/item&gt;&#10;            &lt;item name=&quot;validation&quot; xsi:type=&quot;array&quot;&gt;&#10;                &lt;item name=&quot;required-entry&quot; xsi:type=&quot;boolean&quot;&gt;false&lt;/item&gt;&#10;            &lt;/item&gt;&#10;            &lt;item name=&quot;default&quot; xsi:type=&quot;string&quot;&gt;1&lt;/item&gt;&#10;        &lt;/item&gt;&#10;    &lt;/argument&gt;&#10;&lt;/field&gt;&#10;$END$" toReformat="false" toShortenFQNames="true">
+    <variable name="fieldName" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="source" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="label" expression="" defaultValue="" alwaysStopAt="true" />
     <context>
       <option name="XML" value="true" />
     </context>
