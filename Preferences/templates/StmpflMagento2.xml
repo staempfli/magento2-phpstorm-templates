@@ -59,7 +59,7 @@
       <option name="XML" value="true" />
     </context>
   </template>
-  <template name="2magento field input" value="&lt;field name=&quot;$fieldId$&quot;&gt;&#10;    &lt;argument name=&quot;data&quot; xsi:type=&quot;array&quot;&gt;&#10;        &lt;item name=&quot;config&quot; xsi:type=&quot;array&quot;&gt;&#10;            &lt;item name=&quot;visible&quot; xsi:type=&quot;boolean&quot;&gt;true&lt;/item&gt;&#10;            &lt;item name=&quot;dataType&quot; xsi:type=&quot;string&quot;&gt;text&lt;/item&gt;&#10;            &lt;item name=&quot;label&quot; xsi:type=&quot;string&quot;&gt;$fieldLabel$&lt;/item&gt;&#10;            &lt;item name=&quot;formElement&quot; xsi:type=&quot;string&quot;&gt;input&lt;/item&gt;&#10;            &lt;item name=&quot;sortOrder&quot; xsi:type=&quot;string&quot;&gt;10&lt;/item&gt;&#10;            &lt;item name=&quot;source&quot; xsi:type=&quot;string&quot;&gt;$providerSource$&lt;/item&gt;&#10;        &lt;/item&gt;&#10;    &lt;/argument&gt;&#10;&lt;/field&gt;&#10;$END$" toReformat="false" toShortenFQNames="true">
+  <template name="2magento field text" value="&lt;field name=&quot;$fieldId$&quot;&gt;&#10;    &lt;argument name=&quot;data&quot; xsi:type=&quot;array&quot;&gt;&#10;        &lt;item name=&quot;config&quot; xsi:type=&quot;array&quot;&gt;&#10;            &lt;item name=&quot;visible&quot; xsi:type=&quot;boolean&quot;&gt;true&lt;/item&gt;&#10;            &lt;item name=&quot;dataType&quot; xsi:type=&quot;string&quot;&gt;text&lt;/item&gt;&#10;            &lt;item name=&quot;label&quot; xsi:type=&quot;string&quot;&gt;$fieldLabel$&lt;/item&gt;&#10;            &lt;item name=&quot;formElement&quot; xsi:type=&quot;string&quot;&gt;input&lt;/item&gt;&#10;            &lt;item name=&quot;sortOrder&quot; xsi:type=&quot;string&quot;&gt;10&lt;/item&gt;&#10;            &lt;item name=&quot;source&quot; xsi:type=&quot;string&quot;&gt;$providerSource$&lt;/item&gt;&#10;        &lt;/item&gt;&#10;    &lt;/argument&gt;&#10;&lt;/field&gt;&#10;$END$" toReformat="false" toShortenFQNames="true">
     <variable name="fieldId" expression="" defaultValue="" alwaysStopAt="true" />
     <variable name="fieldLabel" expression="" defaultValue="" alwaysStopAt="true" />
     <variable name="providerSource" expression="" defaultValue="main_fieldset" alwaysStopAt="true" />
@@ -356,6 +356,43 @@
     <variable name="fieldName" expression="" defaultValue="" alwaysStopAt="true" />
     <variable name="source" expression="" defaultValue="" alwaysStopAt="true" />
     <variable name="label" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="XML" value="true" />
+    </context>
+  </template>
+  <template name="2magento getFirstElement" value="// get first news found&#10;$this-&gt;collection-&gt;getSelect()-&gt;limit(1);&#10;foreach ($this-&gt;collection as $item) {&#10;    return $item;&#10;}" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="PHP" value="true" />
+    </context>
+  </template>
+  <template name="2magento eav static attribute" value="$attributes['$fieldName$'] = [&#10;    'type' =&gt; 'static',&#10;    'label' =&gt; '$capitalizedFieldName$',&#10;    'input' =&gt; 'text',&#10;    'required' =&gt; $required$, //true/false&#10;    'sort_order' =&gt; $position$,&#10;    'global' =&gt; ScopedAttributeInterface::$scope$,&#10;    'group' =&gt; 'General',&#10;    //'validate_rules' =&gt; 'a:2:{s:15:&quot;max_text_length&quot;;i:255;s:15:&quot;min_text_length&quot;;i:1;}',&#10;];" toReformat="false" toShortenFQNames="true">
+    <variable name="fieldName" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="capitalizedFieldName" expression="capitalize(fieldName)" defaultValue="" alwaysStopAt="false" />
+    <variable name="required" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="position" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="scope" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="PHP" value="true" />
+    </context>
+  </template>
+  <template name="2magento grid boolean column" value="&lt;column name=&quot;$fieldName$&quot;&gt;&#10;    &lt;argument name=&quot;data&quot; xsi:type=&quot;array&quot;&gt;&#10;        &lt;item name=&quot;options&quot; xsi:type=&quot;object&quot;&gt;Magento\Eav\Model\Entity\Attribute\Source\Boolean&lt;/item&gt;&#10;        &lt;item name=&quot;config&quot; xsi:type=&quot;array&quot;&gt;&#10;            &lt;item name=&quot;filter&quot; xsi:type=&quot;string&quot;&gt;select&lt;/item&gt;&#10;            &lt;item name=&quot;component&quot; xsi:type=&quot;string&quot;&gt;Magento_Ui/js/grid/columns/select&lt;/item&gt;&#10;            &lt;item name=&quot;editor&quot; xsi:type=&quot;string&quot;&gt;select&lt;/item&gt;&#10;            &lt;item name=&quot;dataType&quot; xsi:type=&quot;string&quot;&gt;select&lt;/item&gt;&#10;            &lt;item name=&quot;label&quot; xsi:type=&quot;string&quot; translate=&quot;true&quot;&gt;$capitalizedFieldName$&lt;/item&gt;&#10;            &lt;item name=&quot;visible&quot; xsi:type=&quot;boolean&quot;&gt;true&lt;/item&gt;&#10;        &lt;/item&gt;&#10;    &lt;/argument&gt;&#10;&lt;/column&gt;&#10;$END$" toReformat="false" toShortenFQNames="true">
+    <variable name="fieldName" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="capitalizedFieldName" expression="capitalize(fieldName)" defaultValue="" alwaysStopAt="false" />
+    <context>
+      <option name="XML" value="true" />
+    </context>
+  </template>
+  <template name="2magento grid integer column" value="&lt;column name=&quot;$fieldName$&quot;&gt;&#10;    &lt;argument name=&quot;data&quot; xsi:type=&quot;array&quot;&gt;&#10;        &lt;item name=&quot;config&quot; xsi:type=&quot;array&quot;&gt;&#10;            &lt;item name=&quot;filter&quot; xsi:type=&quot;string&quot;&gt;textRange&lt;/item&gt;&#10;            &lt;item name=&quot;editor&quot; xsi:type=&quot;array&quot;&gt;&#10;                &lt;item name=&quot;editorType&quot; xsi:type=&quot;string&quot;&gt;text&lt;/item&gt;&#10;                &lt;item name=&quot;validation&quot; xsi:type=&quot;array&quot;&gt;&#10;                    &lt;item name=&quot;integer&quot; xsi:type=&quot;boolean&quot;&gt;true&lt;/item&gt;&#10;                &lt;/item&gt;&#10;            &lt;/item&gt;&#10;            &lt;item name=&quot;label&quot; xsi:type=&quot;string&quot; translate=&quot;true&quot;&gt;$capitalizedFieldName$&lt;/item&gt;&#10;            &lt;item name=&quot;visible&quot; xsi:type=&quot;boolean&quot;&gt;true&lt;/item&gt;&#10;        &lt;/item&gt;&#10;    &lt;/argument&gt;&#10;&lt;/column&gt;&#10;$END$" toReformat="false" toShortenFQNames="true">
+    <variable name="fieldName" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="capitalizedFieldName" expression="capitalize(fieldName)" defaultValue="" alwaysStopAt="false" />
+    <context>
+      <option name="XML" value="true" />
+    </context>
+  </template>
+  <template name="2magento field integer" value="&lt;field name=&quot;$fieldName$&quot;&gt;&#10;    &lt;argument name=&quot;data&quot; xsi:type=&quot;array&quot;&gt;&#10;        &lt;item name=&quot;config&quot; xsi:type=&quot;array&quot;&gt;&#10;            &lt;item name=&quot;visible&quot; xsi:type=&quot;boolean&quot;&gt;true&lt;/item&gt;&#10;            &lt;item name=&quot;dataType&quot; xsi:type=&quot;string&quot;&gt;number&lt;/item&gt;&#10;            &lt;item name=&quot;label&quot; xsi:type=&quot;string&quot;&gt;$capitalizedFieldName$&lt;/item&gt;&#10;            &lt;item name=&quot;formElement&quot; xsi:type=&quot;string&quot;&gt;input&lt;/item&gt;&#10;            &lt;item name=&quot;source&quot; xsi:type=&quot;string&quot;&gt;$source$&lt;/item&gt;&#10;            &lt;item name=&quot;default&quot; xsi:type=&quot;number&quot;&gt;0&lt;/item&gt;&#10;            &lt;item name=&quot;validation&quot; xsi:type=&quot;array&quot;&gt;&#10;                &lt;item name=&quot;integer&quot; xsi:type=&quot;boolean&quot;&gt;true&lt;/item&gt;&#10;            &lt;/item&gt;&#10;        &lt;/item&gt;&#10;    &lt;/argument&gt;&#10;&lt;/field&gt;" toReformat="false" toShortenFQNames="true">
+    <variable name="fieldName" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="capitalizedFieldName" expression="capitalize(fieldName)" defaultValue="" alwaysStopAt="false" />
+    <variable name="source" expression="" defaultValue="" alwaysStopAt="true" />
     <context>
       <option name="XML" value="true" />
     </context>
