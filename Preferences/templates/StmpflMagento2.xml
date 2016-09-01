@@ -5,13 +5,16 @@
       <option name="XML" value="true" />
     </context>
   </template>
-  <template name="2magento system section" value="&lt;section id=&quot;$section$&quot; translate=&quot;label&quot; type=&quot;text&quot; sortOrder=&quot;999&quot; showInDefault=&quot;1&quot; showInWebsite=&quot;0&quot; showInStore=&quot;0&quot;&gt;&#10;    &lt;label&gt;$section$&lt;/label&gt;&#10;    &lt;tab&gt;$tab$&lt;/tab&gt;&#10;    &lt;resource&gt;$resource$&lt;/resource&gt;&#10;    &lt;group id=&quot;$group$&quot; translate=&quot;label&quot; type=&quot;text&quot; sortOrder=&quot;1&quot; showInDefault=&quot;1&quot; showInWebsite=&quot;0&quot; showInStore=&quot;0&quot;&gt;&#10;        &lt;label&gt;$group$&lt;/label&gt;&#10;        &lt;field id=&quot;$field$&quot; translate=&quot;label&quot; type=&quot;$type$&quot; sortOrder=&quot;1&quot; showInDefault=&quot;1&quot; showInWebsite=&quot;0&quot; showInStore=&quot;0&quot;&gt;&#10;            &lt;label&gt;$field$&lt;/label&gt;&#10;        &lt;/field&gt;&#10;    &lt;/group&gt;&#10;&lt;/section&gt;" toReformat="false" toShortenFQNames="true">
+  <template name="2magento system section" value="&lt;section id=&quot;$section$&quot; translate=&quot;label&quot; type=&quot;text&quot; sortOrder=&quot;999&quot; showInDefault=&quot;1&quot; showInWebsite=&quot;0&quot; showInStore=&quot;0&quot;&gt;&#10;    &lt;label&gt;$capitalizedSection$&lt;/label&gt;&#10;    &lt;tab&gt;$tab$&lt;/tab&gt;&#10;    &lt;resource&gt;$resource$&lt;/resource&gt;&#10;    &lt;group id=&quot;$group$&quot; translate=&quot;label&quot; type=&quot;text&quot; sortOrder=&quot;1&quot; showInDefault=&quot;1&quot; showInWebsite=&quot;0&quot; showInStore=&quot;0&quot;&gt;&#10;        &lt;label&gt;$capitalizedGroup$&lt;/label&gt;&#10;        &lt;field id=&quot;$field$&quot; translate=&quot;label&quot; type=&quot;$type$&quot; sortOrder=&quot;1&quot; showInDefault=&quot;1&quot; showInWebsite=&quot;0&quot; showInStore=&quot;0&quot;&gt;&#10;            &lt;label&gt;$capitalizedField$&lt;/label&gt;&#10;&lt;!--            &lt;comment&gt;Some comment here...&lt;/comment&gt; --&gt;&#10;&lt;!--            &lt;frontend_class&gt;required-entry&lt;/frontend_class&gt; --&gt;&#10;        &lt;/field&gt;&#10;    &lt;/group&gt;&#10;&lt;/section&gt;" toReformat="false" toShortenFQNames="true">
     <variable name="section" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="capitalizedSection" expression="capitalize(section)" defaultValue="" alwaysStopAt="false" />
     <variable name="tab" expression="" defaultValue="" alwaysStopAt="true" />
     <variable name="resource" expression="" defaultValue="" alwaysStopAt="true" />
     <variable name="group" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="capitalizedGroup" expression="capitalize(group)" defaultValue="" alwaysStopAt="false" />
     <variable name="field" expression="" defaultValue="" alwaysStopAt="true" />
     <variable name="type" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="capitalizedField" expression="capitalize(field)" defaultValue="" alwaysStopAt="false" />
     <context>
       <option name="XML" value="true" />
     </context>
@@ -207,7 +210,7 @@
       <option name="XML" value="true" />
     </context>
   </template>
-  <template name="2magento block" value="use Magento\Framework\View\Element\Template;&#10;use Magento\Widget\Block\BlockInterface;&#10;&#10;class $class$ extends Template implements BlockInterface&#10;{&#10;    /**&#10;     * @var string $_template&#10;     */&#10;    protected $_template = &quot;$template$.phtml&quot;;&#10;&#10;    // write your methods here...&#10;}" toReformat="false" toShortenFQNames="true">
+  <template name="2magento block widget" value="use Magento\Framework\View\Element\Template;&#10;use Magento\Widget\Block\BlockInterface;&#10;&#10;class $class$ extends Template implements BlockInterface&#10;{&#10;    /**&#10;     * @var string $_template&#10;     */&#10;    protected $_template = &quot;$template$.phtml&quot;;&#10;&#10;    // write your methods here...&#10;    $END$&#10;}" toReformat="false" toShortenFQNames="true">
     <variable name="class" expression="" defaultValue="" alwaysStopAt="true" />
     <variable name="template" expression="" defaultValue="" alwaysStopAt="true" />
     <context>
@@ -405,6 +408,30 @@
     <variable name="capitalizedFieldName" expression="capitalize(fieldName)" defaultValue="" alwaysStopAt="false" />
     <variable name="order" expression="" defaultValue="" alwaysStopAt="true" />
     <variable name="source" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="XML" value="true" />
+    </context>
+  </template>
+  <template name="2magento current dates collection function" value="/**&#10; * Set Filters to get current entries from collection&#10; */&#10;protected function setCurrentDatesFilterCollection()&#10;{&#10;    $currentDate = $this-&gt;dateTime-&gt;formatDate(true);&#10;    $this-&gt;$collection$-&gt;addFieldToFilter('is_active', 1)&#10;        -&gt;addAttributeToSelect(['date_from', 'date_to'], 'left') // VERY IMPORTANT: this is needed if we want the filter to properly work for those new where dates are not specify&#10;        -&gt;addFieldToFilter('date_from', [['lteq' =&gt; $currentDate], ['null' =&gt; 'this_value_doesnt_matter']], 'left')&#10;        -&gt;addFieldToFilter('date_to', [['gteq' =&gt; $currentDate], ['null' =&gt; 'this_value_doesnt_matter']], 'left');&#10;}&#10;$END$" toReformat="false" toShortenFQNames="true">
+    <variable name="collection" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="PHP" value="true" />
+    </context>
+  </template>
+  <template name="2magento config get" value="$this-&gt;_scopeConfig-&gt;getValue($path$, \Magento\Store\Model\ScopeInterface::SCOPE_STORE);" toReformat="false" toShortenFQNames="true">
+    <variable name="path" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="PHP" value="true" />
+    </context>
+  </template>
+  <template name="2magento block template" value="use Magento\Framework\View\Element\Template;&#10;&#10;class $class$ extends Template&#10;{&#10;    /**&#10;     * @var string $_template&#10;     */&#10;    protected $_template = &quot;$template$.phtml&quot;;&#10;&#10;    // write your methods here...&#10;    $END$&#10;}" toReformat="false" toShortenFQNames="true">
+    <variable name="class" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="template" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="PHP" value="true" />
+    </context>
+  </template>
+  <template name="2magento show time date item" value="&lt;item name=&quot;options&quot; xsi:type=&quot;array&quot;&gt;&#10;    &lt;item name=&quot;timeFormat&quot; xsi:type=&quot;string&quot;&gt;H:mm&lt;/item&gt;&#10;    &lt;item name=&quot;showsTime&quot; xsi:type=&quot;boolean&quot;&gt;true&lt;/item&gt;&#10;&lt;/item&gt;&#10;$END$" toReformat="false" toShortenFQNames="true">
     <context>
       <option name="XML" value="true" />
     </context>
