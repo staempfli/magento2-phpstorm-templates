@@ -330,7 +330,7 @@
       <option name="PHP" value="true" />
     </context>
   </template>
-  <template name="2magento eav textarea attribute" value="$attributes['$fieldName$'] = [&#10;    'type' =&gt; 'text',&#10;    'label' =&gt; '$capitalizedFieldName$',&#10;    'input' =&gt; 'textarea',&#10;    'required' =&gt; $required$, //true/false&#10;    'sort_order' =&gt; $position$,&#10;    'global' =&gt; ScopedAttributeInterface::$scope$,&#10;    'group' =&gt; 'General',&#10;    'wysiwyg_enabled =&gt; true,&#10;];" toReformat="false" toShortenFQNames="true">
+  <template name="2magento eav textarea attribute" value="$attributes['$fieldName$'] = [&#10;    'type' =&gt; 'text',&#10;    'label' =&gt; '$capitalizedFieldName$',&#10;    'input' =&gt; 'textarea',&#10;    'required' =&gt; $required$, //true/false&#10;    'sort_order' =&gt; $position$,&#10;    'global' =&gt; ScopedAttributeInterface::$scope$,&#10;    'group' =&gt; 'General',&#10;    'wysiwyg_enabled' =&gt; true,&#10;];" toReformat="false" toShortenFQNames="true">
     <variable name="fieldName" expression="" defaultValue="" alwaysStopAt="true" />
     <variable name="capitalizedFieldName" expression="capitalize(fieldName)" defaultValue="" alwaysStopAt="false" />
     <variable name="required" expression="" defaultValue="" alwaysStopAt="true" />
@@ -350,7 +350,7 @@
       <option name="PHP" value="true" />
     </context>
   </template>
-  <template name="2magento eav date attribute" value="$attributes['$fieldName$'] = [&#10;    'type' =&gt; 'datetime',&#10;    'label' =&gt; '$capitalizedFieldName$',&#10;    'input' =&gt; 'date',&#10;    'backend' =&gt; 'Magento\Eav\Model\Entity\Attribute\Backend\Datetime',&#10;    'required' =&gt; $required$, //true/false&#10;    'sort_order' =&gt; $position$,&#10;    'global' =&gt; ScopedAttributeInterface::$scope$,&#10;    'group' =&gt; 'General',&#10;];" toReformat="false" toShortenFQNames="true">
+  <template name="2magento eav date attribute" value="$attributes['$fieldName$'] = [&#10;    'type' =&gt; 'datetime',&#10;    'label' =&gt; '$capitalizedFieldName$',&#10;    'input' =&gt; 'date',&#10;    'backend' =&gt; 'Magento\Eav\Model\Entity\Attribute\Backend\Datetime',&#10;    'required' =&gt; $required$, //true/false&#10;    'sort_order' =&gt; $position$,&#10;    'global' =&gt; ScopedAttributeInterface::$scope$,&#10;    'group' =&gt; 'General',&#10;    'validate_rules' =&gt; 'a:1:{s:16:&quot;input_validation&quot;;s:4:&quot;date&quot;;}',&#10;];" toReformat="false" toShortenFQNames="true">
     <variable name="fieldName" expression="" defaultValue="" alwaysStopAt="true" />
     <variable name="capitalizedFieldName" expression="capitalize(fieldName)" defaultValue="" alwaysStopAt="false" />
     <variable name="required" expression="" defaultValue="" alwaysStopAt="true" />
@@ -360,7 +360,7 @@
       <option name="PHP" value="true" />
     </context>
   </template>
-  <template name="2magento field validation" value="&lt;item name=&quot;validation&quot; xsi:type=&quot;array&quot;&gt;&#10;    &lt;item name=&quot;required-entry&quot; xsi:type=&quot;array&quot;&gt;true&lt;/item&gt;&#10;&lt;/item&gt;" toReformat="false" toShortenFQNames="true">
+  <template name="2magento field validation" value="&lt;item name=&quot;validation&quot; xsi:type=&quot;array&quot;&gt;&#10;    &lt;item name=&quot;required-entry&quot; xsi:type=&quot;array&quot;&gt;true&lt;/item&gt;&#10;    &lt;!--&lt;item name=&quot;validate-email&quot; xsi:type=&quot;boolean&quot;&gt;true&lt;/item&gt;--&gt;&#10;    &lt;!--&lt;item name=&quot;integer&quot; xsi:type=&quot;boolean&quot;&gt;true&lt;/item&gt;--&gt;&#10;&lt;/item&gt;" toReformat="false" toShortenFQNames="true">
     <context>
       <option name="XML" value="true" />
     </context>
@@ -379,12 +379,11 @@
       <option name="PHP" value="true" />
     </context>
   </template>
-  <template name="2magento eav static attribute" value="$attributes['$fieldName$'] = [&#10;    'type' =&gt; 'static',&#10;    'label' =&gt; '$capitalizedFieldName$',&#10;    'input' =&gt; 'text',&#10;    'required' =&gt; $required$, //true/false&#10;    'sort_order' =&gt; $position$,&#10;    'global' =&gt; ScopedAttributeInterface::$scope$,&#10;    'group' =&gt; 'General',&#10;    //'validate_rules' =&gt; 'a:2:{s:15:&quot;max_text_length&quot;;i:255;s:15:&quot;min_text_length&quot;;i:1;}',&#10;];" toReformat="false" toShortenFQNames="true">
+  <template name="2magento eav static attribute" value="$attributes['$fieldName$'] = [&#10;    'type' =&gt; 'static',&#10;    'label' =&gt; '$capitalizedFieldName$',&#10;    'input' =&gt; 'text',&#10;    'required' =&gt; $required$, //true/false&#10;    'sort_order' =&gt; $position$,&#10;    'global' =&gt; ScopedAttributeInterface::SCOPE_GLOBAL,&#10;    'group' =&gt; 'General',&#10;    //'validate_rules' =&gt; 'a:2:{s:15:&quot;max_text_length&quot;;i:255;s:15:&quot;min_text_length&quot;;i:1;}',&#10;];" toReformat="false" toShortenFQNames="true">
     <variable name="fieldName" expression="" defaultValue="" alwaysStopAt="true" />
     <variable name="capitalizedFieldName" expression="capitalize(fieldName)" defaultValue="" alwaysStopAt="false" />
     <variable name="required" expression="" defaultValue="" alwaysStopAt="true" />
     <variable name="position" expression="" defaultValue="" alwaysStopAt="true" />
-    <variable name="scope" expression="" defaultValue="" alwaysStopAt="true" />
     <context>
       <option name="PHP" value="true" />
     </context>
@@ -434,6 +433,22 @@
   <template name="2magento show time date item" value="&lt;item name=&quot;options&quot; xsi:type=&quot;array&quot;&gt;&#10;    &lt;item name=&quot;timeFormat&quot; xsi:type=&quot;string&quot;&gt;H:mm&lt;/item&gt;&#10;    &lt;item name=&quot;showsTime&quot; xsi:type=&quot;boolean&quot;&gt;true&lt;/item&gt;&#10;&lt;/item&gt;&#10;$END$" toReformat="false" toShortenFQNames="true">
     <context>
       <option name="XML" value="true" />
+    </context>
+  </template>
+  <template name="2magento phpmd suppress warnings" value="@SuppressWarnings(PHPMD.$warning$)" toReformat="false" toShortenFQNames="true">
+    <variable name="warning" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="PHP" value="true" />
+    </context>
+  </template>
+  <template name="2magento eav image attribute" value="$attributes['$fieldName$'] = [&#10;    'type' =&gt; 'varchar',&#10;    'label' =&gt; '$capitalizedFieldName$',&#10;    'input' =&gt; 'image',&#10;    'backend' =&gt; 'Staempfli\StoreLocator\Model\Locations\Attribute\Backend\Image',&#10;    'required' =&gt; $required$, //true/false&#10;    'sort_order' =&gt; $position$,&#10;    'global' =&gt; ScopedAttributeInterface::$scope$,&#10;    'group' =&gt; 'General',&#10;];&#10;&#10;$END$" toReformat="false" toShortenFQNames="true">
+    <variable name="fieldName" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="capitalizedFieldName" expression="capitalize(fieldName)" defaultValue="" alwaysStopAt="false" />
+    <variable name="required" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="position" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="scope" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="PHP" value="true" />
     </context>
   </template>
 </templateSet>
