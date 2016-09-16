@@ -217,7 +217,7 @@
       <option name="PHP" value="true" />
     </context>
   </template>
-  <template name="2magento source option" value="use Magento\Framework\Data\OptionSourceInterface;&#10;use Magento\Framework\Option\ArrayInterface;&#10;&#10;class $class$ implements OptionSourceInterface, ArrayInterface&#10;{&#10;    /**&#10;     * @var array $options&#10;     */&#10;    protected $options;&#10;&#10;    /**&#10;     * Category Options&#10;     *&#10;     * @return array&#10;     */&#10;    public function toOptionArray()&#10;    {&#10;        if ($this-&gt;options == null) {&#10;            $this-&gt;options = ['value' =&gt; '', 'label' =&gt; ''];      &#10;        }&#10;&#10;        return $this-&gt;options;&#10;    }&#10;}" toReformat="false" toShortenFQNames="true">
+  <template name="2magento source option" value="use Magento\Framework\Data\OptionSourceInterface;&#10;use Magento\Framework\Option\ArrayInterface;&#10;&#10;class $class$ implements OptionSourceInterface, ArrayInterface&#10;{&#10;    /**&#10;     * @var array $options&#10;     */&#10;    protected $options = [];&#10;&#10;    /**&#10;     * Get Options&#10;     *&#10;     * @return array&#10;     */&#10;    public function toOptionArray()&#10;    {&#10;        if (!$this-&gt;options) {&#10;            $this-&gt;options[] = ['value' =&gt; '', 'label' =&gt; ''];      &#10;        }&#10;&#10;        return $this-&gt;options;&#10;    }&#10;}" toReformat="false" toShortenFQNames="true">
     <variable name="class" expression="" defaultValue="" alwaysStopAt="true" />
     <context>
       <option name="PHP" value="true" />
@@ -285,9 +285,10 @@
       <option name="PHP" value="true" />
     </context>
   </template>
-  <template name="2magento InstallSchema" value="use Magento\Framework\DB\Ddl\Table;&#10;use Magento\Framework\Setup\InstallSchemaInterface;&#10;use Magento\Framework\Setup\SchemaSetupInterface;&#10;use Magento\Framework\Setup\ModuleContextInterface;&#10;&#10;/**&#10; * @codeCoverageIgnore&#10; */&#10;class $className$ implements InstallSchemaInterface&#10;{&#10;    /**&#10;     * {@inheritdoc}&#10;     * @SuppressWarnings(PHPMD.ExcessiveMethodLength)&#10;     */&#10;    public function install(SchemaSetupInterface $setup, ModuleContextInterface $context)&#10;    {&#10;        $installer = ${DS}setup;&#10;&#10;        $installer-&gt;startSetup();&#10;&#10;        // Install actions here...&#10;        $END$&#10;&#10;        $installer-&gt;endSetup();&#10;    }&#10;}" toReformat="false" toShortenFQNames="true">
-    <variable name="className" expression="" defaultValue="" alwaysStopAt="true" />
-    <context />
+  <template name="2magento InstallSchema" value="use Magento\Framework\DB\Ddl\Table;&#10;use Magento\Framework\Setup\InstallSchemaInterface;&#10;use Magento\Framework\Setup\SchemaSetupInterface;&#10;use Magento\Framework\Setup\ModuleContextInterface;&#10;&#10;/**&#10; * @codeCoverageIgnore&#10; */&#10;class InstallSchema implements InstallSchemaInterface&#10;{&#10;    /**&#10;     * {@inheritdoc}&#10;     * @SuppressWarnings(PHPMD.ExcessiveMethodLength)&#10;     */&#10;    public function install(SchemaSetupInterface $setup, ModuleContextInterface $context)&#10;    {&#10;        $setup-&gt;startSetup();&#10;&#10;        // Install actions here...&#10;        $END$&#10;&#10;        $setup-&gt;endSetup();&#10;    }&#10;}" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="PHP" value="true" />
+    </context>
   </template>
   <template name="2magento menu xml" value="&lt;config xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot; xsi:noNamespaceSchemaLocation=&quot;urn:magento:module:Magento_Backend:etc/menu.xsd&quot;&gt;&#10;    &lt;menu&gt;&#10;        $END$&#10;    &lt;/menu&gt;&#10;&lt;/config&gt;" toReformat="false" toShortenFQNames="true">
     <context>
@@ -374,7 +375,7 @@
       <option name="XML" value="true" />
     </context>
   </template>
-  <template name="2magento getFirstElement" value="// get first news found&#10;$this-&gt;collection-&gt;getSelect()-&gt;limit(1);&#10;foreach ($this-&gt;collection as $item) {&#10;    return $item;&#10;}" toReformat="false" toShortenFQNames="true">
+  <template name="2magento getFirstElement" value="// get first item found&#10;$this-&gt;collection-&gt;getSelect()-&gt;limit(1);&#10;foreach ($this-&gt;collection as $item) {&#10;    return $item;&#10;}" toReformat="false" toShortenFQNames="true">
     <context>
       <option name="PHP" value="true" />
     </context>
@@ -449,6 +450,50 @@
     <variable name="scope" expression="" defaultValue="" alwaysStopAt="true" />
     <context>
       <option name="PHP" value="true" />
+    </context>
+  </template>
+  <template name="2magento upgradeSchema" value="use Magento\Framework\DB\Ddl\Table;&#10;use Magento\Framework\Setup\UpgradeSchemaInterface;&#10;use Magento\Framework\Setup\ModuleContextInterface;&#10;use Magento\Framework\Setup\SchemaSetupInterface;&#10;&#10;/**&#10; * @codeCoverageIgnore&#10; */&#10;class UpgradeSchema implements UpgradeSchemaInterface&#10;{&#10;    /**&#10;     * {@inheritdoc}&#10;     */&#10;    public function upgrade(SchemaSetupInterface $setup, ModuleContextInterface $context)&#10;    {&#10;        $setup-&gt;startSetup();&#10;&#10;        if (version_compare($context-&gt;getVersion(), '$version$', '&lt;')) {&#10;            // Add your script updates here&#10;        }&#10;&#10;        $setup-&gt;endSetup();&#10;    }&#10;}&#10;" toReformat="false" toShortenFQNames="true">
+    <variable name="version" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="PHP" value="true" />
+    </context>
+  </template>
+  <template name="2magento upgradeData" value="use Magento\Framework\Setup\UpgradeDataInterface;&#10;use Magento\Framework\Setup\ModuleContextInterface;&#10;use Magento\Framework\Setup\ModuleDataSetupInterface;&#10;&#10;/**&#10; * @codeCoverageIgnore&#10; */&#10;class UpgradeData implements UpgradeDataInterface&#10;{&#10;    /**&#10;     * {@inheritdoc}&#10;     * @SuppressWarnings(PHPMD.NPathComplexity)&#10;     */&#10;    public function upgrade(ModuleDataSetupInterface $setup, ModuleContextInterface $context)&#10;    {&#10;        $setup-&gt;startSetup();&#10;&#10;        if (version_compare($context-&gt;getVersion(), '$version$', '&lt;')) {&#10;            $this-&gt;upgradeVersion$versionMethod$();&#10;        }&#10;&#10;        $setup-&gt;endSetup();&#10;    }&#10;    &#10;    /**&#10;     * Upgrade script for version $version$&#10;     * &#10;     * @return void&#10;     */&#10;    protected function upgradeVersion$versionMethod$() &#10;    {&#10;        // Add here your data upgrade&#10;        $END$&#10;    }&#10;    &#10;}" toReformat="false" toShortenFQNames="true">
+    <variable name="version" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="versionMethod" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="PHP" value="true" />
+    </context>
+  </template>
+  <template name="2magento eav source option" value="use Magento\Eav\Model\Entity\Attribute\Source\AbstractSource;&#10;&#10;class $class$ extends AbstractSource&#10;{&#10;    /**&#10;     * @var array $options&#10;     */&#10;    protected $options;&#10;&#10;    /**&#10;     * Get Options&#10;     *&#10;     * @return array&#10;     */&#10;    public function getAllOptions()&#10;    {&#10;        if ($this-&gt;options == null) {&#10;            $this-&gt;options = ['value' =&gt; '', 'label' =&gt; ''];      &#10;        }&#10;&#10;        return $this-&gt;options;&#10;    }&#10;}" toReformat="false" toShortenFQNames="true">
+    <variable name="class" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="PHP" value="true" />
+    </context>
+  </template>
+  <template name="2magento events observer xml" value="&lt;config xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot; xsi:noNamespaceSchemaLocation=&quot;urn:magento:framework:Event/etc/events.xsd&quot;&gt;&#10;    &lt;event name=&quot;$event$&quot;&gt;&#10;        &lt;observer name=&quot;$prefix$_$event$&quot; instance=&quot;$vendor$\$module$\Observer\$class$&quot; /&gt;&#10;    &lt;/event&gt;&#10;&lt;/config&gt;" toReformat="false" toShortenFQNames="true">
+    <variable name="event" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="prefix" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="vendor" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="module" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="class" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="XML" value="true" />
+    </context>
+  </template>
+  <template name="2magento eav attribute product" value="/**&#10; * Add attributes to the eav/attribute&#10; */&#10;$eavSetup-&gt;addAttribute(&#10;    \Magento\Catalog\Model\Product::ENTITY,&#10;    '$attribute$',&#10;    [    &#10;        'type' =&gt; '$type$',&#10;        'backend' =&gt; '',&#10;        'frontend' =&gt; '',&#10;        'label' =&gt; '$label$',&#10;        'input' =&gt; '',&#10;        'class' =&gt; '',&#10;        'source' =&gt; '',&#10;        'global' =&gt; \Magento\Eav\Model\Entity\Attribute\ScopedAttributeInterface::SCOPE_GLOBAL,&#10;        'visible' =&gt; true,&#10;        'required' =&gt; false,&#10;        'user_defined' =&gt; false,&#10;        'default' =&gt; 0,&#10;        'searchable' =&gt; false,&#10;        'filterable' =&gt; false,&#10;        'comparable' =&gt; false,&#10;        'visible_on_front' =&gt; false,&#10;        'used_in_product_listing' =&gt; true,&#10;        'unique' =&gt; false,&#10;        'apply_to' =&gt; ''&#10;    ]&#10;);&#10;" toReformat="false" toShortenFQNames="true">
+    <variable name="attribute" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="type" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="label" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="PHP" value="true" />
+    </context>
+  </template>
+  <template name="2magento validate-digits js xml" value="validate-digits validate-digits-range digits-range-$min$-$max$" toReformat="false" toShortenFQNames="true">
+    <variable name="min" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="max" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="XML" value="true" />
     </context>
   </template>
 </templateSet>
