@@ -302,7 +302,7 @@
       <option name="XML" value="true" />
     </context>
   </template>
-  <template name="2magento routes xml" value="&lt;config xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot; xsi:noNamespaceSchemaLocation=&quot;urn:magento:framework:App/etc/routes.xsd&quot;&gt;&#10;    &lt;router id=&quot;$type$&quot;&gt; &lt;!-- Standard or Admin --&gt;&#10;        &lt;route id=&quot;$name$&quot; frontName=&quot;$name$&quot;&gt;&#10;            &lt;module name=&quot;$VendorName$_$ModuleName$&quot; /&gt;&#10;        &lt;/route&gt;&#10;    &lt;/router&gt;&#10;&lt;/config&gt;" toReformat="false" toShortenFQNames="true">
+  <template name="2magento routes xml" value="&lt;config xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot; xsi:noNamespaceSchemaLocation=&quot;urn:magento:framework:App/etc/routes.xsd&quot;&gt;&#10;    &lt;router id=&quot;$type$&quot;&gt; &lt;!-- standard or admin --&gt;&#10;        &lt;route id=&quot;$name$&quot; frontName=&quot;$name$&quot;&gt;&#10;            &lt;module name=&quot;$VendorName$_$ModuleName$&quot; /&gt;&#10;        &lt;/route&gt;&#10;    &lt;/router&gt;&#10;&lt;/config&gt;" toReformat="false" toShortenFQNames="true">
     <variable name="type" expression="" defaultValue="" alwaysStopAt="true" />
     <variable name="name" expression="" defaultValue="" alwaysStopAt="true" />
     <variable name="VendorName" expression="" defaultValue="" alwaysStopAt="true" />
@@ -436,7 +436,7 @@
       <option name="XML" value="true" />
     </context>
   </template>
-  <template name="2magento phpmd suppress warnings" value="@SuppressWarnings(PHPMD.$warning$)" toReformat="false" toShortenFQNames="true">
+  <template name="2magento phpmd suppress warnings" value="@SuppressWarnings(PHPMD.$warning$) // https://phpmd.org/rules/index.html" toReformat="false" toShortenFQNames="true">
     <variable name="warning" expression="" defaultValue="" alwaysStopAt="true" />
     <context>
       <option name="PHP" value="true" />
@@ -452,8 +452,9 @@
       <option name="PHP" value="true" />
     </context>
   </template>
-  <template name="2magento upgradeSchema" value="use Magento\Framework\DB\Ddl\Table;&#10;use Magento\Framework\Setup\UpgradeSchemaInterface;&#10;use Magento\Framework\Setup\ModuleContextInterface;&#10;use Magento\Framework\Setup\SchemaSetupInterface;&#10;&#10;/**&#10; * @codeCoverageIgnore&#10; */&#10;class UpgradeSchema implements UpgradeSchemaInterface&#10;{&#10;    /**&#10;     * {@inheritdoc}&#10;     */&#10;    public function upgrade(SchemaSetupInterface $setup, ModuleContextInterface $context)&#10;    {&#10;        $setup-&gt;startSetup();&#10;&#10;        if (version_compare($context-&gt;getVersion(), '$version$', '&lt;')) {&#10;            // Add your script updates here&#10;        }&#10;&#10;        $setup-&gt;endSetup();&#10;    }&#10;}&#10;" toReformat="false" toShortenFQNames="true">
+  <template name="2magento upgradeSchema" value="use Magento\Framework\DB\Ddl\Table;&#10;use Magento\Framework\Setup\UpgradeSchemaInterface;&#10;use Magento\Framework\Setup\ModuleContextInterface;&#10;use Magento\Framework\Setup\SchemaSetupInterface;&#10;&#10;/**&#10; * @codeCoverageIgnore&#10; */&#10;class UpgradeSchema implements UpgradeSchemaInterface&#10;{&#10;    /**&#10;     * {@inheritdoc}&#10;     */&#10;    public function upgrade(SchemaSetupInterface $setup, ModuleContextInterface $context)&#10;    {&#10;        $setup-&gt;startSetup();&#10;&#10;        if (version_compare($context-&gt;getVersion(), '$version$', '&lt;')) {&#10;             $this-&gt;upgradeVersion$versionMethod$();&#10;        }&#10;&#10;        $setup-&gt;endSetup();&#10;    }&#10;    &#10;    /**&#10;     * Upgrade script for version $version$&#10;     * &#10;     * @return void&#10;     */&#10;    protected function upgradeVersion$versionMethod$() &#10;    {&#10;        // Add here your data upgrade&#10;        $END$&#10;    }&#10;}&#10;" toReformat="false" toShortenFQNames="true">
     <variable name="version" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="versionMethod" expression="" defaultValue="" alwaysStopAt="true" />
     <context>
       <option name="PHP" value="true" />
     </context>
@@ -481,7 +482,7 @@
       <option name="XML" value="true" />
     </context>
   </template>
-  <template name="2magento eav attribute product" value="/**&#10; * Add attributes to the eav/attribute&#10; */&#10;$eavSetup-&gt;addAttribute(&#10;    \Magento\Catalog\Model\Product::ENTITY,&#10;    '$attribute$',&#10;    [    &#10;        'type' =&gt; '$type$',&#10;        'backend' =&gt; '',&#10;        'frontend' =&gt; '',&#10;        'label' =&gt; '$label$',&#10;        'input' =&gt; '',&#10;        'class' =&gt; '',&#10;        'source' =&gt; '',&#10;        'global' =&gt; \Magento\Eav\Model\Entity\Attribute\ScopedAttributeInterface::SCOPE_GLOBAL,&#10;        'visible' =&gt; true,&#10;        'required' =&gt; false,&#10;        'user_defined' =&gt; false,&#10;        'default' =&gt; 0,&#10;        'searchable' =&gt; false,&#10;        'filterable' =&gt; false,&#10;        'comparable' =&gt; false,&#10;        'visible_on_front' =&gt; false,&#10;        'used_in_product_listing' =&gt; true,&#10;        'unique' =&gt; false,&#10;        'apply_to' =&gt; ''&#10;    ]&#10;);&#10;" toReformat="false" toShortenFQNames="true">
+  <template name="2magento eav attribute product" value="/**&#10; * Add attributes to the eav/attribute&#10; */&#10;$eavSetup-&gt;addAttribute(&#10;    \Magento\Catalog\Model\Product::ENTITY,&#10;    '$attribute$',&#10;    [    &#10;        'type' =&gt; '$type$',&#10;        'backend' =&gt; '',&#10;        'frontend' =&gt; '',&#10;        'label' =&gt; '$label$',&#10;        'input' =&gt; '',&#10;        'class' =&gt; '',&#10;        'source' =&gt; '',&#10;        'global' =&gt; \Magento\Eav\Model\Entity\Attribute\ScopedAttributeInterface::SCOPE_GLOBAL,&#10;        'visible' =&gt; true,&#10;        'required' =&gt; false,&#10;        'user_defined' =&gt; false,&#10;        'default' =&gt; 0,&#10;        'searchable' =&gt; false,&#10;        'filterable' =&gt; false,&#10;        'comparable' =&gt; false,&#10;        'visible_on_front' =&gt; false,&#10;        'used_in_product_listing' =&gt; true,&#10;        'unique' =&gt; false,&#10;        'apply_to' =&gt; '',&#10;        'is_used_in_grid' =&gt; true,&#10;        'is_visible_in_grid' =&gt; false,&#10;        'is_filterable_in_grid' =&gt; true,&#10;    ]&#10;);&#10;" toReformat="false" toShortenFQNames="true">
     <variable name="attribute" expression="" defaultValue="" alwaysStopAt="true" />
     <variable name="type" expression="" defaultValue="" alwaysStopAt="true" />
     <variable name="label" expression="" defaultValue="" alwaysStopAt="true" />
@@ -494,6 +495,21 @@
     <variable name="max" expression="" defaultValue="" alwaysStopAt="true" />
     <context>
       <option name="XML" value="true" />
+    </context>
+  </template>
+  <template name="2magento add column" value="$setup-&gt;getConnection()-&gt;addColumn(&#10;    $setup-&gt;getTable('$tableName$'),&#10;    '$columnName$',&#10;    [&#10;        'type' =&gt; Table::TYPE_$type$,&#10;        'lenght' =&gt; null,&#10;        'nullable' =&gt; true,&#10;        'default' =&gt; '$default$',&#10;        'comment' =&gt; '$columnName$',&#10;    ]&#10;);" toReformat="false" toShortenFQNames="true">
+    <variable name="tableName" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="columnName" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="type" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="default" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="PHP" value="true" />
+    </context>
+  </template>
+  <template name="2magento observer" value="use Magento\Framework\Event\ObserverInterface;&#10;use Magento\Framework\Event\Observer;&#10;&#10;class $class$ implements ObserverInterface&#10;{&#10;    /**&#10;     * Execute Observer&#10;     *&#10;     * @param Observer $observer&#10;     * @return void&#10;     */&#10;    public function execute(Observer $observer)&#10;    {&#10;        $END$&#10;    }&#10;}&#10;" toReformat="false" toShortenFQNames="true">
+    <variable name="class" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="PHP" value="true" />
     </context>
   </template>
 </templateSet>
