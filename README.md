@@ -12,7 +12,7 @@ All other templates are custom ones with a naming prefix `2m` in order to make t
 
 0. Just download the `.jar` file and import it in your PHPStorm `File -> Import` 
 
-    * `https://github.com/staempfli/magento2-phpstorm-templates/releases/<version>/settings.jar`
+    * `https://github.com/staempfli/magento2-phpstorm-templates/releases/<version>/stmpfl_2m_templates.jar`
 
 0. Set your personal configuration for comments on PHPStorm `Preferences -> Editor -> File and Code Templates -> stmpfl_variables`
 
