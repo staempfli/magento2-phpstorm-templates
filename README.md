@@ -10,27 +10,49 @@ All the other templates are custom ones with a naming prefix "2m" in order to ma
 
 ## Installation
 
+You can install this project in 2 different ways:
+
+### Using PHPStorm .jar
+
+Just download the `.jar` file and import it in your PHPStorm `File -> Import` 
+
+* `https://github.com/staempfli/magento2-phpstorm-templates/releases/<version>/settings.jar`
+
+### Cloning this project
+
 **IMPORTANT:** Before you do this, make sure PhpStorm is not running, or it will overwrite the changed files before shutting down.
 
 1.- Clone this repo.
 
 ```
-$ git clone https://github.com/staempfli/m2-phpstorm.git
+$ git clone https://github.com/staempfli/magento2-phpstorm-templates.git
 ```
 
 2.- Private configuration
 
 ```
+$ cd magento2-phpstorm-templates
 $ cp Preferences/fileTemplates/includes/stmpfl_variables.txt.dist Preferences/fileTemplates/includes/stmpfl_variables.txt
 $ vim Preferences/fileTemplates/includes/stmpfl_variables.txt
 ```
 
-3.- Create Symlinks to new templates. Go into this project `$ cd m2-phpstorm` and execute the following: 
+3.- Create Symlinks to new templates:
+ 
+**OS X**
 
 ```
-$ cd Preferences
-$ find * -type f | xargs -I{} ln -sf $(pwd)/{} $(find ~ -type f -name "idea.properties" -exec dirname {} +)/{}
+$ ln -s $(PWD)/magento2-phpstorm-templates/Preferences/templates/* ~/Library/Preferences/<product name><version number>/templates/
 ```
+
+**Linux**
+
+```
+$ ln -s $(PWD)/magento2-phpstorm-templates/Preferences/templates/* ~/.<product name><version number>/config/templates/
+```
+
+**Windows**
+
+As symlinks do not work by default in Linux, it is better to use the `.jar installation.
 
 ## Preferences
 
