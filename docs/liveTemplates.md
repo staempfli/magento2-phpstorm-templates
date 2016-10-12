@@ -8,7 +8,7 @@
 * 2magento grid date column
 * 2magento grid store column
 * 2magento fieldset
-* 2magento field input
+* 2magento field text
 * 2magento field select
 * 2magento field date
 * 2magento widget param select
@@ -25,7 +25,7 @@
 * 2magento field dynamic
 * 2magento field wysiwyg
 * 2magento widget xml
-* 2magento block
+* 2magento block widget
 * 2magento source option
 * 2magento layout
 * 2magento requirejs-config
@@ -49,3 +49,22 @@
 * 2magento eav date attribute
 * 2magento field validation
 * 2magento field boolean
+* 2magento getFirstElement
+* 2magento eav static attribute
+* 2magento grid boolean column
+* 2magento grid integer column
+* 2magento field integer
+* 2magento current dates collection function
+* 2magento config get
+* 2magento block template
+* 2magento show time date item
+* 2magento phpmd suppress warnings
+* 2magento eav image attribute
+* 2magento upgradeSchema
+* 2magento upgradeData
+* 2magento eav source option
+* 2magento events observer xml
+* 2magento eav attribute product
+* 2magento validate-digits js xml
+* 2magento add column
+* 2magento observer
