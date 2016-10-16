@@ -33,3 +33,8 @@ We need to use the default `PHP Class.php` because automatic Namespace only work
 You can contribute with new templates following this manual:
 
 * [Contribute manual](./docs/contribute.md)
+
+## Demo
+
+![Video Demo](docs/img/video-demo.gif)
+
