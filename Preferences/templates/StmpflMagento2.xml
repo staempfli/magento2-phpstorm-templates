@@ -271,14 +271,6 @@
       <option name="XML" value="true" />
     </context>
   </template>
-  <template name="2magento events xml" value="&lt;config xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot; xsi:noNamespaceSchemaLocation=&quot;urn:magento:framework:Event/etc/events.xsd&quot;&gt;&#10;    &lt;event name=&quot;$event$&quot;&gt;&#10;        &lt;observer name=&quot;$observer$_$event$&quot; instance=&quot;$class$&quot; shared=&quot;false&quot;/&gt;&#10;    &lt;/event&gt;&#10;&lt;/config&gt;" toReformat="false" toShortenFQNames="true">
-    <variable name="event" expression="" defaultValue="" alwaysStopAt="true" />
-    <variable name="observer" expression="" defaultValue="" alwaysStopAt="true" />
-    <variable name="class" expression="" defaultValue="" alwaysStopAt="true" />
-    <context>
-      <option name="XML" value="true" />
-    </context>
-  </template>
   <template name="2magento helper" value="use Magento\Framework\App\Helper\AbstractHelper;&#10;&#10;class $className$ extends AbstractHelper&#10;{&#10;    $END$&#10;}" toReformat="false" toShortenFQNames="true">
     <variable name="className" expression="" defaultValue="" alwaysStopAt="true" />
     <context>
