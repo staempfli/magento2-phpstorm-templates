@@ -68,3 +68,4 @@
 * 2magento validate-digits js xml
 * 2magento add column
 * 2magento observer
+* 2magento view xml

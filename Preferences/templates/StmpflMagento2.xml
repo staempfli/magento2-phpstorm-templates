@@ -504,4 +504,9 @@
       <option name="PHP" value="true" />
     </context>
   </template>
+  <template name="2magento view xml" value="&lt;view xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot; xsi:noNamespaceSchemaLocation=&quot;urn:magento:framework:Config/etc/view.xsd&quot;&gt;&#10;    $END$&#10;&lt;/view&gt;" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="XML" value="true" />
+    </context>
+  </template>
 </templateSet>
