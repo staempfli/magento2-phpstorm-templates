@@ -509,4 +509,34 @@
       <option name="XML" value="true" />
     </context>
   </template>
+  <template name="2magento disable component layout xml" value="&lt;referenceBlock name=&quot;$blockName$&quot;&gt;&#10;    &lt;arguments&gt;&#10;        &lt;argument name=&quot;jsLayout&quot; xsi:type=&quot;array&quot;&gt;&#10;            &lt;item name=&quot;components&quot; xsi:type=&quot;array&quot;&gt;&#10;                &lt;item name=&quot;$componentName$&quot; xsi:type=&quot;array&quot;&gt;&#10;                    &lt;item name=&quot;config&quot; xsi:type=&quot;array&quot;&gt;&#10;                        &lt;item name=&quot;componentDisabled&quot; xsi:type=&quot;boolean&quot;&gt;true&lt;/item&gt;&#10;                    &lt;/item&gt;&#10;                &lt;/item&gt;&#10;            &lt;/item&gt;&#10;        &lt;/argument&gt;&#10;    &lt;/arguments&gt;&#10;&lt;/referenceBlock&gt;" toReformat="false" toShortenFQNames="true">
+    <variable name="blockName" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="componentName" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="XML" value="true" />
+    </context>
+  </template>
+  <template name="2magento factory simple" value="use Magento\Framework\ObjectManagerInterface;&#10;&#10;class $className$&#10;{&#10;    /**&#10;     * Object Manager instance&#10;     *&#10;     * @var ObjectManagerInterface&#10;     */&#10;    protected $_objectManager = null;&#10;&#10;    /**&#10;     * Instance name to create&#10;     *&#10;     * @var string&#10;     */&#10;    protected $_instanceName = null;&#10;&#10;    /**&#10;     * Factory constructor&#10;     *&#10;     * @param ObjectManagerInterface $objectManager&#10;     * @param string $instanceName&#10;     */&#10;    public function __construct(ObjectManagerInterface $objectManager, $instanceName = '\\$vendor$\\$module$\\$restNamespace$')&#10;    {&#10;        $this-&gt;_objectManager = $objectManager;&#10;        $this-&gt;_instanceName = $instanceName;&#10;    }&#10;&#10;    /**&#10;     * Create class instance with specified parameters&#10;     *&#10;     * @param array $data&#10;     * @return \$vendor$\$module$\$restNamespace$&#10;     */&#10;    public function create(array $data = array())&#10;    {&#10;        return $this-&gt;_objectManager-&gt;create($this-&gt;_instanceName, $data);&#10;    }&#10;    &#10;}" toReformat="false" toShortenFQNames="true">
+    <variable name="className" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="vendor" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="module" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="restNamespace" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="PHP" value="true" />
+    </context>
+  </template>
+  <template name="2magento factory type option" value="use InvalidArgumentException;&#10;use Magento\Framework\ObjectManagerInterface;&#10;use $vendor$\$module$\$restClassType$ as ObjectType;&#10;&#10;class $className$&#10;{&#10;    /**&#10;     * Object Manager instance&#10;     *&#10;     * @var ObjectManagerInterface&#10;     */&#10;    protected $objectManager = null;&#10;&#10;    /**&#10;     * Instance name to create&#10;     *&#10;     * @var string&#10;     */&#10;    protected $instanceTypeNames = [&#10;        '$type1$' =&gt; '\\$vendor$\\$module$\\$restClass$\\$className1$',&#10;        '$type2$' =&gt; '\\$vendor$\\$module$\\$restClass$\\$className2$',&#10;    ];&#10;&#10;    /**&#10;     * Factory constructor&#10;     *&#10;     * @param ObjectManagerInterface $objectManager&#10;     */&#10;    public function __construct(ObjectManagerInterface $objectManager)&#10;    {&#10;        $this-&gt;objectManager = $objectManager;&#10;    }&#10;&#10;    /**&#10;     * Create corresponding class instance&#10;     *&#10;     * @param $type&#10;     * @param array $data&#10;     * @return ObjectType&#10;     */&#10;    public function create($type, array $data = array())&#10;    {&#10;        if (empty($this-&gt;instanceTypeNames[$type])) {&#10;            throw new InvalidArgumentException('&quot;' . $type . ': isn\'t allowed');&#10;        }&#10;&#10;        $resultInstance = $this-&gt;objectManager-&gt;create($this-&gt;instanceTypeNames[$type], $data);&#10;        if (!$resultInstance instanceof ObjectType) {&#10;            throw new InvalidArgumentException(get_class($resultInstance) . ' isn\'t instance of \$vendor$\$module$\$restClassType$');&#10;        }&#10;&#10;        return $resultInstance;&#10;    }&#10;}" toReformat="false" toShortenFQNames="true">
+    <variable name="vendor" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="module" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="restClassType" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="className" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="type1" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="restClass" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="className1" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="type2" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="className2" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="PHP" value="true" />
+    </context>
+  </template>
 </templateSet>

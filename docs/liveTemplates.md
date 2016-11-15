@@ -69,3 +69,6 @@
 * 2magento add column
 * 2magento observer
 * 2magento view xml
+* 2magento disable component layout xml
+* 2magento factory simple
+* 2magento factory type option
