@@ -72,3 +72,4 @@
 * 2magento disable component layout xml
 * 2magento factory simple
 * 2magento factory type option
+* 2magento email_templates xml

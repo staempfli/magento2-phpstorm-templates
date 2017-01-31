@@ -539,4 +539,15 @@
       <option name="PHP" value="true" />
     </context>
   </template>
+  <template name="2magento email_templates xml" value="&lt;config xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot; xsi:noNamespaceSchemaLocation=&quot;urn:magento:module:Magento_Email:etc/email_templates.xsd&quot;&gt;&#10;    &lt;template id=&quot;$lowerVendorname$_$lowerModulename$_email_$copyEmailname$_template&quot; label=&quot;$module&quot; file=&quot;$emailname$.html&quot; type=&quot;text&quot; module=&quot;$Vendorname$_$Modulename$&quot; area=&quot;adminhtml&quot;/&gt;&#10;&lt;/config&gt;&#10;" toReformat="false" toShortenFQNames="true">
+    <variable name="Vendorname" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="Modulename" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="emailname" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="lowerVendorname" expression="decapitalize(Vendorname)" defaultValue="" alwaysStopAt="false" />
+    <variable name="lowerModulename" expression="decapitalize(Modulename)" defaultValue="" alwaysStopAt="false" />
+    <variable name="copyEmailname" expression="decapitalize(emailname)" defaultValue="" alwaysStopAt="false" />
+    <context>
+      <option name="XML" value="true" />
+    </context>
+  </template>
 </templateSet>
