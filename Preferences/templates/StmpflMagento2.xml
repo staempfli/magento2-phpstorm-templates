@@ -434,7 +434,7 @@
       <option name="PHP" value="true" />
     </context>
   </template>
-  <template name="2magento eav image attribute" value="$attributes['$fieldName$'] = [&#10;    'type' =&gt; 'varchar',&#10;    'label' =&gt; '$capitalizedFieldName$',&#10;    'input' =&gt; 'image',&#10;    'backend' =&gt; '$vendor$\$package$\Attribute\Backend\Image',&#10;    'required' =&gt; $required$, //true/false&#10;    'sort_order' =&gt; $position$,&#10;    'global' =&gt; ScopedAttributeInterface::$scope$,&#10;    'group' =&gt; 'General',&#10;];&#10;&#10;$END$" toReformat="false" toShortenFQNames="true">
+  <template name="2magento eav image attribute" value="$attributes['$fieldName$'] = [&#10;    'type' =&gt; 'varchar',&#10;    'label' =&gt; '$capitalizedFieldName$',&#10;    'input' =&gt; 'image',&#10;    'backend' =&gt; '$vendor$\$package$\Model\Attribute\Backend\Image',&#10;    'required' =&gt; $required$, //true/false&#10;    'sort_order' =&gt; $position$,&#10;    'global' =&gt; ScopedAttributeInterface::$scope$,&#10;    'group' =&gt; 'General',&#10;];&#10;&#10;$END$" toReformat="false" toShortenFQNames="true">
     <variable name="fieldName" expression="" defaultValue="" alwaysStopAt="true" />
     <variable name="capitalizedFieldName" expression="capitalize(fieldName)" defaultValue="" alwaysStopAt="false" />
     <variable name="vendor" expression="" defaultValue="" alwaysStopAt="true" />
