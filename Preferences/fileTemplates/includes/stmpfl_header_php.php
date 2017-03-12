@@ -1,6 +1,6 @@
 /**
  * ${NAME}
  *
- * Copyright © ${YEAR} ${company}. All rights reserved.
+ * @copyright Copyright © ${YEAR} ${company}. All rights reserved.
  * @author    ${userEmail}
  */
