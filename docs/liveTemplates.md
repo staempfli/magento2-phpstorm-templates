@@ -73,3 +73,6 @@
 * 2magento factory simple
 * 2magento factory type option
 * 2magento email_templates xml
+* 2magento plugin before
+* 2magento plugin after
+* 2magento plugin around
