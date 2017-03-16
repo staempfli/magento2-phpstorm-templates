@@ -574,4 +574,32 @@
       <option name="PHP" value="true" />
     </context>
   </template>
+  <template name="2magento test objectManager" value="$objectManager = \Magento\TestFramework\Helper\Bootstrap::getObjectManager();" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="PHP" value="true" />
+    </context>
+  </template>
+  <template name="2magento test integration class" value="extends \PHPUnit_Framework_TestCase&#10;{&#10;    /**&#10;     * @var \$vendor$\$package$\$class$&#10;     */&#10;    protected $$$objectParam$;&#10;&#10;    protected function setUp()&#10;    {&#10;        $objectManager = \Magento\TestFramework\Helper\Bootstrap::getObjectManager();&#10;        $this-&gt;$objectParam$ = $objectManager-&gt;create(\$vendor$\$package$\$class$::class);&#10;    }&#10;    &#10;    $END$&#10;}" toReformat="false" toShortenFQNames="true">
+    <variable name="vendor" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="package" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="class" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="objectParam" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="PHP" value="true" />
+    </context>
+  </template>
+  <template name="2magento test fixture function" value="/**&#10; * @magentoAppIsolation enabled&#10; * @magentoDbIsolation enabled&#10; * @magentoDataFixture $fixtureFile$&#10; */&#10;public function test$name$()&#10;{&#10;    // $this-&gt;assert...&#10;}" toReformat="false" toShortenFQNames="true">
+    <variable name="fixtureFile" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="name" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="PHP" value="true" />
+    </context>
+  </template>
+  <template name="2magento test dataProvider function" value="/**&#10; * @magentoAppIsolation enabled&#10; * @magentoDbIsolation enabled&#10; * @dataProvider $providerName$DataProvider&#10; */&#10;public function test$name$(array $data)&#10;{&#10;    // $this-&gt;assert...&#10;}&#10;&#10;public function $providerName$DataProvider()&#10;{&#10;    return [&#10;        [&#10;            'key1' =&gt; 'value1',&#10;        ],&#10;    ];&#10;}" toReformat="false" toShortenFQNames="true">
+    <variable name="providerName" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="name" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="PHP" value="true" />
+    </context>
+  </template>
 </templateSet>

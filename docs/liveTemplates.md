@@ -76,3 +76,7 @@
 * 2magento plugin before
 * 2magento plugin after
 * 2magento plugin around
+* 2magento test objectManager
+* 2magento test integration class
+* 2magento test fixture function
+* 2magento test dataProvider function
