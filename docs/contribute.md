@@ -23,7 +23,7 @@ vim Preferences/fileTemplates/includes/stmpfl_variables.txt
 **OS X**
 
 ```
-ln -s $(PWD)/magento2-phpstorm-templates/Preferences/templates/* ~/Library/Preferences/<product name><version number>/templates/
+ln -s $(PWD)/magento2-phpstorm-templates/Preferences/templates/* ~/Library/Preferences/<product name><version number>/settingsRepository/repository/templates/
 ln -s $(PWD)/magento2-phpstorm-templates/Preferences/fileTemplates/2M* ~/Library/Preferences/<product name><version number>/fileTemplates/
 ln -s $(PWD)/magento2-phpstorm-templates/Preferences/fileTemplates/includes/* ~/Library/Preferences/<product name><version number>/fileTemplates/includes/
 ln -s $(PWD)/magento2-phpstorm-templates/Preferences/fileTemplates/internal/* ~/Library/Preferences/<product name><version number>/fileTemplates/internal/
