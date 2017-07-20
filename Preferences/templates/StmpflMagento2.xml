@@ -595,4 +595,14 @@
       <option name="PHP" value="true" />
     </context>
   </template>
+  <template name="2magento customer add attribute" value="/** @var CustomerSetup $customerSetup */&#10;$this-&gt;customerSetup = $this-&gt;customerSetupFactory-&gt;create(['setup' =&gt; $setup]);&#10;&#10;$this-&gt;customerSetup-&gt;addAttribute(&#10;    \Magento\Customer\Model\Customer::ENTITY,&#10;    $attributeCode,&#10;    [&#10;        'type' =&gt; $type$, //varchar, int, text, datetime, decimal, static&#10;        'label' =&gt; $label$,&#10;        'input' =&gt; $input$, //text, select, textarea, date, hidden&#10;        'required' =&gt; $required$, //true, false&#10;        'sort_order' =&gt; $sortOrder$,&#10;        'visible' =&gt; true,&#10;        'user_defined' =&gt; 0,&#10;        'system' =&gt; false,&#10;        'is_used_in_grid' =&gt; false,&#10;        //'source' =&gt; Vendor\Package\...,&#10;    ]&#10;);&#10;$attribute = $this-&gt;customerSetup-&gt;getEavConfig()-&gt;getAttribute(\Magento\Customer\Model\Customer::ENTITY, $attributeCode);&#10;$forms = ['adminhtml_customer'];&#10;if ($showOnFrontend) {&#10;    $forms = [&#10;        'adminhtml_customer',&#10;        'customer_account_create',&#10;        'customer_account_edit',&#10;        'checkout_register',&#10;        'adminhtml_checkout',&#10;    ];&#10;}&#10;$attribute-&gt;setData('used_in_forms', $forms);&#10;$attribute-&gt;save(); //@codingStandardsIgnoreLine" toReformat="false" toShortenFQNames="true">
+    <variable name="type" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="label" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="input" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="required" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="sortOrder" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="PHP" value="true" />
+    </context>
+  </template>
 </templateSet>
