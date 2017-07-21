@@ -130,7 +130,7 @@
       <option name="PHP" value="true" />
     </context>
   </template>
-  <template name="2magento config save" value="/** @var $this-&gt;config \Magento\Config\Model\ResourceModel\Config **/&#10;$this-&gt;config-&gt;saveConfig('$path$', $value$, 'default', 0);" toReformat="false" toShortenFQNames="true">
+  <template name="2magento config save" value="/** @var \Magento\Config\Model\ResourceModel\Config $this-&gt;config **/&#10;$this-&gt;config-&gt;saveConfig('$path$', $value$, 'default', 0);" toReformat="false" toShortenFQNames="true">
     <variable name="path" expression="" defaultValue="" alwaysStopAt="true" />
     <variable name="value" expression="" defaultValue="" alwaysStopAt="true" />
     <context>
@@ -403,7 +403,7 @@
       <option name="PHP" value="true" />
     </context>
   </template>
-  <template name="2magento config get" value="/** @var $this-&gt;scopeConfig \Magento\Framework\App\Config\ScopeConfigInterface **/&#10;$this-&gt;scopeConfig-&gt;getValue($path$, \Magento\Store\Model\ScopeInterface::SCOPE_STORE);" toReformat="false" toShortenFQNames="true">
+  <template name="2magento config get" value="/** @var \Magento\Framework\App\Config\ScopeConfigInterface $this-&gt;scopeConfig **/&#10;$this-&gt;scopeConfig-&gt;getValue($path$, \Magento\Store\Model\ScopeInterface::SCOPE_STORE);" toReformat="false" toShortenFQNames="true">
     <variable name="path" expression="" defaultValue="" alwaysStopAt="true" />
     <context>
       <option name="PHP" value="true" />
