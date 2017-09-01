@@ -24,6 +24,8 @@
 * 2magento field hidden
 * 2magento field dynamic
 * 2magento field wysiwyg
+* 2magento field wysiwyg simple
+* 2magento field wysiwyg simple + widgets
 * 2magento widget xml
 * 2magento block widget
 * 2magento source option
