@@ -545,10 +545,9 @@
       <option name="XML" value="true" />
     </context>
   </template>
-  <template name="2magento plugin before" value="public function before$method$($subjectClass$ $subject, $\$param$)&#10;{&#10;    // return array of modified arguments&#10;    return [$\$param$];&#10;}" toReformat="false" toShortenFQNames="true">
+  <template name="2magento plugin before" value="public function before$method$($subjectClass$ $subject, $param1, $param2)&#10;{&#10;    // return array of modified arguments&#10;    return [$param1, $param2];&#10;}" toReformat="false" toShortenFQNames="true">
     <variable name="method" expression="capitalize(String)" defaultValue="" alwaysStopAt="true" />
     <variable name="subjectClass" expression="" defaultValue="" alwaysStopAt="true" />
-    <variable name="param" expression="" defaultValue="param1" alwaysStopAt="true" />
     <context>
       <option name="PHP" value="true" />
     </context>
