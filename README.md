@@ -10,7 +10,7 @@ All other templates are custom ones with a naming prefix `2m` in order to make t
 
 ## Installation
 
-0. Just download the `.jar` file and import it in your PHPStorm `File -> Import` 
+0. Just download the `.jar` file and import it in your PHPStorm `File -> Import Settings` 
 
     * `https://github.com/staempfli/magento2-phpstorm-templates/releases/<version>/stmpfl_2m_templates.jar`
 
