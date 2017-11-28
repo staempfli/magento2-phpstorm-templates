@@ -83,3 +83,4 @@
 * 2magento test fixture function
 * 2magento test dataProvider function
 * 2magento customer add attribute
+* 2magento setup order quote field

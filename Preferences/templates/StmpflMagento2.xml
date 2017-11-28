@@ -137,7 +137,7 @@
       <option name="PHP" value="true" />
     </context>
   </template>
-  <template name="2magento table new" value="/**&#10; * Create table '$table_name$'&#10; */&#10;$table = $setup-&gt;getConnection()-&gt;newTable(&#10;    $setup-&gt;getTable('$table_name$')&#10;)-&gt;addColumn(&#10;    '$id$',&#10;    Table::TYPE_SMALLINT,&#10;    null,&#10;    ['identity' =&gt; true, 'nullable' =&gt; false, 'primary' =&gt; true],&#10;    '$id$'&#10;)-&gt;addIndex(&#10;    $setup-&gt;getIdxName('$table_name$', ['$id$']),&#10;    ['$id$']&#10;)-&gt;setComment(&#10;    '$description$'&#10;);&#10;&#10;// More columns here&#10;$END$&#10;&#10;$setup-&gt;getConnection()-&gt;createTable($table);" description="New table for setup script" toReformat="false" toShortenFQNames="true">
+  <template name="2magento table new" value="/**&#10; * Create table '$table_name$'&#10; */&#10;$table = $setup-&gt;getConnection()-&gt;newTable(&#10;    $setup-&gt;getTable('$table_name$')&#10;)-&gt;addColumn(&#10;    '$id$',&#10;    Table::TYPE_SMALLINT,&#10;    null,&#10;    ['identity' =&gt; true, 'nullable' =&gt; false, 'primary' =&gt; true],&#10;    '$id$'&#10;)-&gt;addIndex(&#10;    $setup-&gt;getIdxName('$table_name$', ['$id$']),&#10;    ['$id$']&#10;)-&gt;setComment(&#10;    '$description$'&#10;);&#10;&#10;// More columns here&#10;$END$&#10;&#10;$setup-&gt;getConnection()-&gt;createTable($table);" description="" toReformat="false" toShortenFQNames="true">
     <variable name="table_name" expression="" defaultValue="table_name" alwaysStopAt="true" />
     <variable name="id" expression="" defaultValue="id" alwaysStopAt="true" />
     <variable name="description" expression="" defaultValue="Some description" alwaysStopAt="true" />
@@ -145,7 +145,7 @@
       <option name="PHP" value="true" />
     </context>
   </template>
-  <template name="2magento table column" value="$table-&gt;addColumn(&#10;    '$fieldName$',&#10;    Table::TYPE_$type$,&#10;    null,&#10;    ['nullable' =&gt; true, 'default' =&gt; '$defaultValue$'],&#10;    '$fieldName$'&#10;);&#10;&#10;$END$" description="Add column to table" toReformat="false" toShortenFQNames="true">
+  <template name="2magento table column" value="$table-&gt;addColumn(&#10;    '$fieldName$',&#10;    Table::TYPE_$type$,&#10;    null,&#10;    ['nullable' =&gt; true, 'default' =&gt; '$defaultValue$'],&#10;    '$fieldName$'&#10;);&#10;&#10;$END$" description="" toReformat="false" toShortenFQNames="true">
     <variable name="fieldName" expression="" defaultValue="field_name" alwaysStopAt="true" />
     <variable name="type" expression="" defaultValue="" alwaysStopAt="true" />
     <variable name="defaultValue" expression="" defaultValue="" alwaysStopAt="true" />
@@ -153,7 +153,7 @@
       <option name="PHP" value="true" />
     </context>
   </template>
-  <template name="2magento table foreignKey" value="&#10;$table-&gt;addColumn(&#10;    '$currentId$',&#10;    Table::TYPE_$type$,&#10;    null,&#10;    ['nullable' =&gt; false, 'primary' =&gt; true],&#10;    'Foreign Key $currentId$'&#10;)-&gt;addForeignKey(&#10;    $setup-&gt;getFkName('$currentTable$', '$currentId$', '$foreignTable$', '$foreignId$'),&#10;    '$currentId$',&#10;    $setup-&gt;getTable('$foreignTable$'),&#10;    '$foreignId$',&#10;    Table::ACTION_$actionType$&#10;);&#10;&#10;$END$" description="Add foreign key to table" toReformat="false" toShortenFQNames="true">
+  <template name="2magento table foreignKey" value="&#10;$table-&gt;addColumn(&#10;    '$currentId$',&#10;    Table::TYPE_$type$,&#10;    null,&#10;    ['nullable' =&gt; false, 'primary' =&gt; true],&#10;    'Foreign Key $currentId$'&#10;)-&gt;addForeignKey(&#10;    $setup-&gt;getFkName('$currentTable$', '$currentId$', '$foreignTable$', '$foreignId$'),&#10;    '$currentId$',&#10;    $setup-&gt;getTable('$foreignTable$'),&#10;    '$foreignId$',&#10;    Table::ACTION_$actionType$&#10;);&#10;&#10;$END$" description="" toReformat="false" toShortenFQNames="true">
     <variable name="currentId" expression="" defaultValue="current_id" alwaysStopAt="true" />
     <variable name="type" expression="" defaultValue="" alwaysStopAt="true" />
     <variable name="currentTable" expression="" defaultValue="current_table" alwaysStopAt="true" />
@@ -348,7 +348,7 @@
       <option name="PHP" value="true" />
     </context>
   </template>
-  <template name="2magento field validation" value="&lt;item name=&quot;validation&quot; xsi:type=&quot;array&quot;&gt;&#10;    &lt;item name=&quot;required-entry&quot; xsi:type=&quot;array&quot;&gt;true&lt;/item&gt;&#10;    &lt;!--&lt;item name=&quot;validate-email&quot; xsi:type=&quot;boolean&quot;&gt;true&lt;/item&gt;--&gt;&#10;    &lt;!--&lt;item name=&quot;integer&quot; xsi:type=&quot;boolean&quot;&gt;true&lt;/item&gt;--&gt;&#10;&lt;/item&gt;" toReformat="false" toShortenFQNames="true">
+  <template name="2magento field validation" value="&lt;item name=&quot;validation&quot; xsi:type=&quot;array&quot;&gt;&#10;    &lt;item name=&quot;required-entry&quot; xsi:type=&quot;boolean&quot;&gt;true&lt;/item&gt;&#10;    &lt;!--&lt;item name=&quot;validate-email&quot; xsi:type=&quot;boolean&quot;&gt;true&lt;/item&gt;--&gt;&#10;    &lt;!--&lt;item name=&quot;integer&quot; xsi:type=&quot;boolean&quot;&gt;true&lt;/item&gt;--&gt;&#10;&lt;/item&gt;" toReformat="false" toShortenFQNames="true">
     <context>
       <option name="XML" value="true" />
     </context>
@@ -618,6 +618,14 @@
     <variable name="order" expression="" defaultValue="" alwaysStopAt="true" />
     <context>
       <option name="XML" value="true" />
+    </context>
+  </template>
+  <template name="2magento setup order quote field" value="//        @todo: move in top of the class       &#10;//        /**&#10;//         * @var \Magento\Sales\Setup\SalesSetupFactory&#10;//         */&#10;//        private $salesSetupFactory;&#10;//        /**&#10;//         * @var \Magento\Quote\Setup\QuoteSetupFactory&#10;//         */&#10;//        private $quoteSetupFactory;&#10;//&#10;//        public function __construct(&#10;//            \Magento\Sales\Setup\SalesSetupFactory $salesSetupFactory,&#10;//            \Magento\Quote\Setup\QuoteSetupFactory $quoteSetupFactory&#10;//        ) {&#10;//            $this-&gt;salesSetupFactory = $salesSetupFactory;&#10;//            $this-&gt;quoteSetupFactory = $quoteSetupFactory;&#10;//        }&#10;        &#10;/** @var \Magento\Quote\Setup\QuoteSetup $quoteSetup */&#10;$quoteSetup = $this-&gt;quoteSetupFactory-&gt;create();&#10;$quoteSetup-&gt;addAttribute(&#10;    'quote',&#10;    '$fieldname$',&#10;    ['type' =&gt; \Magento\Framework\DB\Ddl\Table::$type$, 'lenght' =&gt; $lenght$, 'nullable' =&gt; true, 'comment' =&gt; 'Quote $fieldname$']&#10;);&#10;/** @var \Magento\Sales\Setup\SalesSetup $salesSetup */&#10;$salesSetup = $this-&gt;salesSetupFactory-&gt;create();&#10;$salesSetup-&gt;addAttribute(&#10;    'order',&#10;    '$fieldname$',&#10;    ['type' =&gt; \Magento\Framework\DB\Ddl\Table::$type$, 'lenght' =&gt; $lenght$, 'nullable' =&gt; true, 'grid' =&gt; false, 'comment' =&gt; 'Order $fieldname$']&#10;);&#10;&#10;//        @todo: Add into module.xml&#10;//        &lt;sequence&gt;&#10;//            &lt;module name=&quot;Magento_Quote&quot;/&gt;&#10;//            &lt;module name=&quot;Magento_Sales&quot;/&gt;&#10;//        &lt;/sequence&gt;" toReformat="false" toShortenFQNames="true">
+    <variable name="fieldname" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="type" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="lenght" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="PHP" value="true" />
     </context>
   </template>
 </templateSet>
