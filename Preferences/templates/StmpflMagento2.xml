@@ -630,4 +630,9 @@
       <option name="PHP" value="true" />
     </context>
   </template>
+  <template name="2magento setup uninstall" value="use Magento\Framework\Setup\UninstallInterface;&#10;use Magento\Framework\Setup\SchemaSetupInterface;&#10;use Magento\Framework\Setup\ModuleContextInterface;&#10;&#10;class Uninstall implements UninstallInterface&#10;{&#10;    /**&#10;     * @SuppressWarnings(PHPMD.UnusedFormalParameter)&#10;     * @param SchemaSetupInterface $setup&#10;     * @param ModuleContextInterface $context&#10;     */&#10;    public function uninstall(SchemaSetupInterface $setup, ModuleContextInterface $context)&#10;    {&#10;        $setup-&gt;startSetup();&#10;&#10;//        $setup-&gt;getConnection()-&gt;dropTable(&#10;//            $setup-&gt;getTable('table_name')&#10;//        );&#10;//&#10;//        $setup-&gt;getConnection()-&gt;dropColumn(&#10;//            $setup-&gt;getTable('table_name'),&#10;//            'column_name'&#10;//        );&#10;&#10;        $setup-&gt;endSetup();&#10;    }&#10;}" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="PHP" value="true" />
+    </context>
+  </template>
 </templateSet>
