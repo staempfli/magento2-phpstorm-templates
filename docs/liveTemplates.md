@@ -87,3 +87,4 @@
 * 2magento setup uninstall
 * 2magento webapi xml
 * 2magento quote to order observer
+* 2magento quote item to order item plugin

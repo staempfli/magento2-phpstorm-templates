@@ -652,4 +652,14 @@
       <option name="PHP" value="true" />
     </context>
   </template>
+  <template name="2magento item quote to item order plugin" value="use Magento\Quote\Model\Quote\Item\ToOrderItem;&#10;&#10;class ToOrderItemPlugin&#10;{&#10;    /**&#10;     * @param ToOrderItem $subject&#10;     * @param callable $proceed&#10;     * @param Item|AddressItem $item&#10;     * @param array $data&#10;     * @return \Magento\Sales\Api\Data\OrderItemInterface&#10;     * @SuppressWarnings(PHPMD.UnusedFormalParameter)&#10;     */&#10;    public function aroundConvert(&#10;        ToOrderItem $subject,&#10;        callable $proceed,&#10;        $item, &#10;        $data = []&#10;    ) {&#10;        /** @var \Magento\Sales\Api\Data\OrderItemInterface $orderItem */&#10;        $orderItem = $proceed($item, $data);&#10;        $orderItem-&gt;setData(&#10;            '$attribute$',&#10;            $item-&gt;getData('$attribute$')&#10;        );&#10;        return $orderItem;&#10;    }&#10;&#10;    //@todo: add plugin in di.xml&#10;    //&lt;type name=&quot;Magento\Quote\Model\Quote\Item\ToOrderItem&quot;&gt;&#10;    //  &lt;plugin name=&quot;$vendor$_$module$_add_to_order_item&quot; type=&quot;$Vendor$\$Module$\Plugin\ToOrderItemPlugin&quot;/&gt;&#10;    //&lt;/type&gt;&#10;}" toReformat="false" toShortenFQNames="true">
+    <variable name="attribute" expression="" defaultValue="&quot;custom_attribute&quot;" alwaysStopAt="true" />
+    <variable name="vendor" expression="" defaultValue="&quot;vendor&quot;" alwaysStopAt="true" />
+    <variable name="module" expression="" defaultValue="&quot;module&quot;" alwaysStopAt="true" />
+    <variable name="Vendor" expression="capitalize(vendor)" defaultValue="" alwaysStopAt="false" />
+    <variable name="Module" expression="capitalize(module)" defaultValue="" alwaysStopAt="false" />
+    <context>
+      <option name="PHP" value="true" />
+    </context>
+  </template>
 </templateSet>
