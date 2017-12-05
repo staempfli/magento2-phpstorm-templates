@@ -635,4 +635,15 @@
       <option name="PHP" value="true" />
     </context>
   </template>
+  <template name="2magento webapi xml" value="&lt;routes xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot; xsi:noNamespaceSchemaLocation=&quot;urn:magento:module:Magento_Webapi:etc/webapi.xsd&quot;&gt;&#10;    &lt;route url=&quot;/V1/$subpath$/$methodUrl$&quot; method=&quot;PUT&quot;&gt;&#10;        &lt;service class=&quot;$vendor$\$module$\Api\$api$Interface&quot; method=&quot;$method$&quot;/&gt;&#10;        &lt;resources&gt;&#10;            &lt;resource ref=&quot;anonymous&quot;/&gt;&#10;        &lt;/resources&gt;&#10;    &lt;/route&gt;&#10;&lt;/routes&gt;" toReformat="false" toShortenFQNames="true">
+    <variable name="subpath" expression="" defaultValue="&quot;subpath&quot;" alwaysStopAt="true" />
+    <variable name="methodUrl" expression="" defaultValue="&quot;method&quot;" alwaysStopAt="true" />
+    <variable name="method" expression="camelCase(methodUrl)" defaultValue="" alwaysStopAt="false" />
+    <variable name="vendor" expression="" defaultValue="&quot;Vendor&quot;" alwaysStopAt="true" />
+    <variable name="module" expression="" defaultValue="&quot;Module&quot;" alwaysStopAt="true" />
+    <variable name="api" expression="" defaultValue="&quot;ApiClass&quot;" alwaysStopAt="true" />
+    <context>
+      <option name="XML" value="true" />
+    </context>
+  </template>
 </templateSet>

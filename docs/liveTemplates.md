@@ -85,3 +85,4 @@
 * 2magento customer add attribute
 * 2magento setup order quote field
 * 2magento setup uninstall
+* 2magento webapi xml
