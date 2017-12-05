@@ -86,3 +86,4 @@
 * 2magento setup order quote field
 * 2magento setup uninstall
 * 2magento webapi xml
+* 2magento quote to order observer

@@ -646,4 +646,10 @@
       <option name="XML" value="true" />
     </context>
   </template>
+  <template name="2magento quote to order observer" value="/**&#10; * @param Observer $observer&#10; * @return void&#10; * @event sales_model_service_quote_submit_before&#10; */&#10;public function execute(Observer $observer)&#10;{&#10;    $this-&gt;addQuoteAttributeToOrder($observer);&#10;}&#10;&#10;private function addQuoteAttributeToOrder(Observer $observer)&#10;{&#10;    /* @var $order \Magento\Sales\Model\Order */&#10;    $order = $observer-&gt;getEvent()-&gt;getOrder();&#10;    /** @var $quote \Magento\Quote\Model\Quote $quote */&#10;    $quote = $observer-&gt;getEvent()-&gt;getQuote();&#10;&#10;    $order-&gt;setData(&#10;        '$attribute$',&#10;        $quote-&gt;getData('$attribute$'));&#10;}" toReformat="false" toShortenFQNames="true">
+    <variable name="attribute" expression="" defaultValue="&quot;custom_attribute&quot;" alwaysStopAt="true" />
+    <context>
+      <option name="PHP" value="true" />
+    </context>
+  </template>
 </templateSet>
