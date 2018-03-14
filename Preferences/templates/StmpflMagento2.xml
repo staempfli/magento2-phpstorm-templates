@@ -117,12 +117,12 @@
   </template>
   <template name="2magento phpcs ignore block" value="//@codingStandardsIgnoreStart&#10;$SELECTION$&#10;//@codingStandardsIgnoreEnd" description="" toReformat="false" toShortenFQNames="true">
     <context>
-      <option name="CSS" value="true" />
       <option name="HTML" value="true" />
-      <option name="JAVA_SCRIPT" value="true" />
-      <option name="PHP" value="true" />
-      <option name="SQL" value="true" />
       <option name="XML" value="true" />
+      <option name="CSS" value="true" />
+      <option name="JAVA_SCRIPT" value="true" />
+      <option name="SQL" value="true" />
+      <option name="PHP" value="true" />
     </context>
   </template>
   <template name="2magento phpcs ignore line" value="//@codingStandardsIgnoreLine" description="" toReformat="false" toShortenFQNames="true">
@@ -658,6 +658,18 @@
     <variable name="module" expression="" defaultValue="&quot;module&quot;" alwaysStopAt="true" />
     <variable name="Vendor" expression="capitalize(vendor)" defaultValue="" alwaysStopAt="false" />
     <variable name="Module" expression="capitalize(module)" defaultValue="" alwaysStopAt="false" />
+    <context>
+      <option name="PHP" value="true" />
+    </context>
+  </template>
+  <template name="2magento test annotation frontend store" value="/**&#10; * @magentoAppIsolation enabled&#10; * @magentoAppArea frontend&#10; * @magentoConfigFixture current_store general/locale/code de_CH&#10; */" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="PHP" value="true" />
+    </context>
+  </template>
+  <template name="2magento test change preference" value="protected function setUp()&#10;{&#10;    parent::setUp();&#10;    \Magento\TestFramework\Helper\Bootstrap::getObjectManager()-&gt;configure(&#10;        ['preferences' =&gt; [$for$::class =&gt; $type$::class]]&#10;    );&#10;}" toReformat="false" toShortenFQNames="true">
+    <variable name="for" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="type" expression="" defaultValue="" alwaysStopAt="true" />
     <context>
       <option name="PHP" value="true" />
     </context>

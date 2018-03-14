@@ -82,6 +82,8 @@
 * 2magento test integration class
 * 2magento test fixture function
 * 2magento test dataProvider function
+* 2magento test change preference
+* 2magento test annotation frontend store
 * 2magento customer add attribute
 * 2magento setup order quote field
 * 2magento setup uninstall
