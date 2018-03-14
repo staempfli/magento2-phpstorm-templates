@@ -88,3 +88,17 @@
 * 2magento webapi xml
 * 2magento quote to order observer
 * 2magento quote item to order item plugin
+* xsi 
+* xsi array 
+* xsi boolean 
+* xsi configurableObject 
+* xsi const 
+* xsi constant 
+* xsi helper 
+* xsi init_parameter 
+* xsi null 
+* xsi number 
+* xsi object 
+* xsi options 
+* xsi string 
+* xsi url 
