@@ -256,7 +256,7 @@
     </context>
   </template>
   <template name="2magento Controller Front" value="use Magento\Framework\App\Action\Action;&#10;use Magento\Framework\View\Result\PageFactory;&#10;use Magento\Framework\App\Action\Context;&#10;&#10;class $className$ extends Action&#10;{&#10;    /**&#10;     * @var PageFactory&#10;     */&#10;    protected $pageFactory;&#10;&#10;    /**&#10;     * @param Context $context&#10;     * @param PageFactory $pageFactory&#10;     */&#10;    public function __construct(Context $context, PageFactory $pageFactory)&#10;    {&#10;        parent::__construct($context);&#10;        $this-&gt;pageFactory = $pageFactory;&#10;    }&#10;&#10;    /**&#10;     * Index Action&#10;     * &#10;     * @return \Magento\Framework\View\Result\Page&#10;     */&#10;    public function execute()&#10;    {&#10;        /** @var \Magento\Framework\View\Result\Page $resultPage */&#10;        $resultPage = $this-&gt;pageFactory-&gt;create();&#10;        return $resultPage;&#10;    }&#10;}" description="" toReformat="false" toShortenFQNames="true">
-    <variable name="className" expression="fileNameWithoutExtension()" defaultValue="" alwaysStopAt="true" />
+    <variable name="className" expression="fileNameWithoutExtension()" defaultValue="" alwaysStopAt="false" />
     <context>
       <option name="PHP" value="true" />
     </context>
@@ -410,7 +410,7 @@
     </context>
   </template>
   <template name="2magento block template" value="use Magento\Framework\View\Element\Template;&#10;&#10;class $class$ extends Template&#10;{&#10;    /**&#10;     * @var string $_template&#10;     */&#10;    protected $_template = &quot;$template$.phtml&quot;;&#10;&#10;    // write your methods here...&#10;    $END$&#10;}" description="" toReformat="false" toShortenFQNames="true">
-    <variable name="class" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="class" expression="fileNameWithoutExtension()" defaultValue="" alwaysStopAt="false" />
     <variable name="template" expression="" defaultValue="" alwaysStopAt="true" />
     <context>
       <option name="PHP" value="true" />
@@ -571,11 +571,8 @@
       <option name="PHP" value="true" />
     </context>
   </template>
-  <template name="2magento test integration class" value="extends \PHPUnit_Framework_TestCase&#10;{&#10;    /**&#10;     * @var \$vendor$\$package$\$class$&#10;     */&#10;    protected $$$objectParam$;&#10;&#10;    protected function setUp()&#10;    {&#10;        $objectManager = \Magento\TestFramework\Helper\Bootstrap::getObjectManager();&#10;        $this-&gt;$objectParam$ = $objectManager-&gt;create(\$vendor$\$package$\$class$::class);&#10;    }&#10;    &#10;    $END$&#10;}" description="" toReformat="false" toShortenFQNames="true">
-    <variable name="vendor" expression="" defaultValue="" alwaysStopAt="true" />
-    <variable name="package" expression="" defaultValue="" alwaysStopAt="true" />
-    <variable name="class" expression="" defaultValue="" alwaysStopAt="true" />
-    <variable name="objectParam" expression="" defaultValue="" alwaysStopAt="true" />
+  <template name="2magento test integration" value="class $className$ extends \PHPUnit\Framework\TestCase&#10;{&#10;    protected function setUp()&#10;    {&#10;        $objectManager = \Magento\TestFramework\Helper\Bootstrap::getObjectManager();&#10;        //@TODO: create your object instances here...&#10;        //$this-&gt;someObject = $objectManager-&gt;create(\Some\Class::class);&#10;    }&#10;    &#10;    public function testNothing()&#10;    {&#10;        $this-&gt;fail('Test is properly setup');&#10;    }&#10;}" description="" toReformat="false" toShortenFQNames="true">
+    <variable name="className" expression="fileNameWithoutExtension()" defaultValue="" alwaysStopAt="false" />
     <context>
       <option name="PHP" value="true" />
     </context>
@@ -587,7 +584,7 @@
       <option name="PHP" value="true" />
     </context>
   </template>
-  <template name="2magento test dataProvider function" value="/**&#10; * @magentoAppIsolation enabled&#10; * @magentoDbIsolation enabled&#10; * @dataProvider $providerName$DataProvider&#10; */&#10;public function test$name$(array $data)&#10;{&#10;    // $this-&gt;assert...&#10;}&#10;&#10;public function $providerName$DataProvider()&#10;{&#10;    return [&#10;        [&#10;            'key1' =&gt; 'value1',&#10;        ],&#10;    ];&#10;}" description="" toReformat="false" toShortenFQNames="true">
+  <template name="2magento test dataProvider function" value="/**&#10; * @dataProvider $providerName$DataProvider&#10; */&#10;public function test$name$(array $data)&#10;{&#10;    // $this-&gt;assert...&#10;}&#10;&#10;public function $providerName$DataProvider()&#10;{&#10;    return [&#10;        [&#10;            'key1' =&gt; 'value1',&#10;        ],&#10;    ];&#10;}" description="" toReformat="false" toShortenFQNames="true">
     <variable name="providerName" expression="" defaultValue="" alwaysStopAt="true" />
     <variable name="name" expression="" defaultValue="" alwaysStopAt="true" />
     <context>
@@ -667,7 +664,7 @@
       <option name="PHP" value="true" />
     </context>
   </template>
-  <template name="2magento test change preference" value="protected function setUp()&#10;{&#10;    parent::setUp();&#10;    \Magento\TestFramework\Helper\Bootstrap::getObjectManager()-&gt;configure(&#10;        ['preferences' =&gt; [$for$::class =&gt; $type$::class]]&#10;    );&#10;}" toReformat="false" toShortenFQNames="true">
+  <template name="2magento test change preference" value="\Magento\TestFramework\Helper\Bootstrap::getObjectManager()-&gt;configure(&#10;    ['preferences' =&gt; [$for$::class =&gt; $type$::class]]&#10;);&#10;" toReformat="false" toShortenFQNames="true">
     <variable name="for" expression="" defaultValue="" alwaysStopAt="true" />
     <variable name="type" expression="" defaultValue="" alwaysStopAt="true" />
     <context>
@@ -742,6 +739,28 @@
   <template name="xsi constant" value="xsi:type=&quot;constant&quot;" description="xsi:type=&quot;constant&quot;" toReformat="false" toShortenFQNames="true">
     <context>
       <option name="XML" value="true" />
+    </context>
+  </template>
+  <template name="2magento test integration controller" value="class $className$ extends \Magento\TestFramework\TestCase\AbstractController&#10;{&#10;    protected function setUp()&#10;    {&#10;        parent::setUp();&#10;        $objectManager = \Magento\TestFramework\Helper\Bootstrap::getObjectManager();&#10;        //@TODO: create your object instances here...&#10;        //$this-&gt;someObject = $objectManager-&gt;create(\Some\Class::class);&#10;    }&#10;    &#10;    public function testNothing()&#10;    {&#10;        $this-&gt;fail('Test is properly setup');&#10;    }&#10;}" description="" toReformat="false" toShortenFQNames="true">
+    <variable name="className" expression="fileNameWithoutExtension()" defaultValue="" alwaysStopAt="false" />
+    <context>
+      <option name="PHP" value="true" />
+    </context>
+  </template>
+  <template name="2magento test unit" value="class $className$ extends \PHPUnit\Framework\TestCase&#10;{ &#10;    public function testNothing()&#10;    {&#10;        $this-&gt;fail('Test is properly setup');&#10;    }&#10;}" description="" toReformat="false" toShortenFQNames="true">
+    <variable name="className" expression="fileNameWithoutExtension()" defaultValue="" alwaysStopAt="false" />
+    <context>
+      <option name="PHP" value="true" />
+    </context>
+  </template>
+  <template name="2magento test command execute method" value="private function executeCommand(string $commandIdentifier, array $arrayInput = []): string&#10;{&#10;    // Workaround issue https://github.com/magento/magento2/issues/12844&#10;    \Magento\TestFramework\Helper\Bootstrap::getObjectManager()-&gt;configure(&#10;        [&#10;            'preferences' =&gt; [&#10;                ltrim(&#10;                    \Magento\Framework\Interception\ObjectManager\ConfigInterface::class,&#10;                    '\\'&#10;                ) =&gt; ltrim(&#10;                    \Magento\TestFramework\ObjectManager\Config::class,&#10;                    '\\'&#10;                ),&#10;            ],&#10;        ]&#10;    );&#10;    $commands = \Magento\TestFramework\Helper\Bootstrap::getObjectManager()&#10;        -&gt;create(\Magento\Framework\Console\CommandListInterface::class)&#10;        -&gt;getCommands();&#10; &#10;    $output = new BufferedOutput();&#10;    $commands[$commandIdentifier]-&gt;run(&#10;        new ArrayInput($arrayInput),&#10;        $output&#10;    );&#10;    return $output-&gt;fetch();&#10;}&#10;" description="" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="PHP" value="true" />
+    </context>
+  </template>
+  <template name="2magento test email" value="$objectManager = \Magento\TestFramework\Helper\Bootstrap::getObjectManager();&#10;$mailTransportMock = $objectManager-&gt;get(\Magento\TestFramework\Mail\Template\TransportBuilderMock::class);&#10;$objectManager-&gt;addSharedInstance(&#10;    $mailTransportMock,&#10;    \Magento\Framework\Mail\Template\TransportBuilder::class&#10;);&#10;&#10;// @TODO: your code that sends an email&#10;&#10;$sentEmail = $mailTransportMock-&gt;getSentMessage();&#10;$this-&gt;assertInstanceOf(\Magento\Framework\Mail\Message::class, $sentEmail, 'Email should have been sent');&#10;" description="" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="PHP" value="true" />
     </context>
   </template>
 </templateSet>

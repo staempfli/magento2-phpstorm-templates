@@ -1,5 +1,3 @@
-# Live Templates
-
 * 2magento sequence
 * 2magento system section
 * 2magento admin menu active
@@ -24,8 +22,6 @@
 * 2magento field hidden
 * 2magento field dynamic
 * 2magento field wysiwyg
-* 2magento field wysiwyg simple
-* 2magento field wysiwyg simple + widgets
 * 2magento widget xml
 * 2magento block widget
 * 2magento source option
@@ -37,7 +33,6 @@
 * 2magento Controller Admin
 * 2magento Controller Front
 * 2magento di xml
-* 2magento events xml
 * 2magento helper
 * 2magento InstallSchema
 * 2magento menu xml
@@ -79,28 +74,34 @@
 * 2magento plugin after
 * 2magento plugin around
 * 2magento test objectManager
-* 2magento test integration class
+* 2magento test integration
 * 2magento test fixture function
 * 2magento test dataProvider function
-* 2magento test change preference
-* 2magento test annotation frontend store
 * 2magento customer add attribute
+* 2magento field wysiwyg simple
+* 2magento field wysiwyg simple + widgets
 * 2magento setup order quote field
 * 2magento setup uninstall
 * 2magento webapi xml
 * 2magento quote to order observer
-* 2magento quote item to order item plugin
-* xsi 
-* xsi array 
-* xsi boolean 
-* xsi configurableObject 
-* xsi const 
-* xsi constant 
-* xsi helper 
-* xsi init_parameter 
-* xsi null 
-* xsi number 
-* xsi object 
-* xsi options 
-* xsi string 
-* xsi url 
+* 2magento item quote to item order plugin
+* 2magento test annotation frontend store
+* 2magento test change preference
+* xsi array
+* xsi string
+* xsi object
+* xsi
+* xsi number
+* xsi boolean
+* xsi const
+* xsi configurableObject
+* xsi null
+* xsi init_parameter
+* xsi options
+* xsi url
+* xsi helper
+* xsi constant
+* 2magento test integration controller
+* 2magento test unit
+* 2magento test command execute method
+* 2magento test email
