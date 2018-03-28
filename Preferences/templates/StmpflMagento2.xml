@@ -577,7 +577,7 @@
       <option name="PHP" value="true" />
     </context>
   </template>
-  <template name="2magento test fixture function" value="/**&#10; * @magentoAppIsolation enabled&#10; * @magentoDbIsolation enabled&#10; * @magentoDataFixture $fixtureFile$&#10; */&#10;public function test$name$()&#10;{&#10;    // $this-&gt;assert...&#10;}" description="" toReformat="false" toShortenFQNames="true">
+  <template name="2magento test annotation fixture" value="/**&#10; * @magentoAppIsolation enabled&#10; * @magentoDbIsolation enabled&#10; * @magentoDataFixture /../../../../../../dev/tests/integration/testsuite/Magento/$fixtureFile$.php&#10; */&#10;public function test$name$()&#10;{&#10;    // $this-&gt;assert...&#10;}" description="" toReformat="false" toShortenFQNames="true">
     <variable name="fixtureFile" expression="" defaultValue="" alwaysStopAt="true" />
     <variable name="name" expression="" defaultValue="" alwaysStopAt="true" />
     <context>
@@ -759,6 +759,13 @@
     </context>
   </template>
   <template name="2magento test email" value="$objectManager = \Magento\TestFramework\Helper\Bootstrap::getObjectManager();&#10;$mailTransportMock = $objectManager-&gt;get(\Magento\TestFramework\Mail\Template\TransportBuilderMock::class);&#10;$objectManager-&gt;addSharedInstance(&#10;    $mailTransportMock,&#10;    \Magento\Framework\Mail\Template\TransportBuilder::class&#10;);&#10;&#10;// @TODO: your code that sends an email&#10;&#10;$sentEmail = $mailTransportMock-&gt;getSentMessage();&#10;$this-&gt;assertInstanceOf(\Magento\Framework\Mail\Message::class, $sentEmail, 'Email should have been sent');&#10;" description="" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="PHP" value="true" />
+    </context>
+  </template>
+  <template name="2magento test loadFixture methods" value="public static function loadFixture()&#10;{&#10;    include __DIR__ . '/../../../../../../dev/tests/integration/testsuite/Magento/$fileSubPath$.php';&#10;}&#10;&#10;public static function loadFixtureRollback()&#10;{&#10;    include __DIR__ . '/../../../../../../dev/tests/integration/testsuite/Magento/$fileSubPath$_rollback.php';&#10;}&#10;&#10;/**&#10; * @magentoAppIsolation enabled&#10; * @magentoDbIsolation enabled&#10; * @magentoDataFixture loadFixture&#10; */&#10;public function test$name$()&#10;{&#10;    // $this-&gt;assert...&#10;}" description="" toReformat="false" toShortenFQNames="true">
+    <variable name="fileSubPath" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="name" expression="" defaultValue="" alwaysStopAt="true" />
     <context>
       <option name="PHP" value="true" />
     </context>

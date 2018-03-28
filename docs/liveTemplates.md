@@ -75,7 +75,7 @@
 * 2magento plugin around
 * 2magento test objectManager
 * 2magento test integration
-* 2magento test fixture function
+* 2magento test annotation fixture
 * 2magento test dataProvider function
 * 2magento customer add attribute
 * 2magento field wysiwyg simple
@@ -105,3 +105,4 @@
 * 2magento test unit
 * 2magento test command execute method
 * 2magento test email
+* 2magento test loadFixture methods
