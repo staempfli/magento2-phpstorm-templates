@@ -106,3 +106,4 @@
 * 2magento test command execute method
 * 2magento test email
 * 2magento test loadFixture methods
+* 2magento test layout frontend

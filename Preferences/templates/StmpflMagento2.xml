@@ -770,4 +770,11 @@
       <option name="PHP" value="true" />
     </context>
   </template>
+  <template name="2magento test layout frontend" value="/**&#10; * @magentoAppArea frontend&#10; */&#10;public function test$testName$()&#10;{&#10;    $layout = $this-&gt;getLayout('$handle$');&#10;    // Your test here...&#10;}&#10;&#10;/**&#10; * @param string|string[] $handles&#10; * @return \Magento\Framework\View\LayoutInterface&#10; */&#10;protected function getLayout($handles)&#10;{&#10;    /** @var \Magento\Framework\View\Result\Page $resultPage */&#10;    $resultPage = $this-&gt;_objectManager-&gt;get(\Magento\Framework\View\Result\Page::class);&#10;    $resultPage-&gt;addHandle('default');&#10;    $resultPage-&gt;addHandle($handles);&#10;    return $resultPage-&gt;getLayout();&#10;}" description="" toReformat="false" toShortenFQNames="true">
+    <variable name="testName" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="handle" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="PHP" value="true" />
+    </context>
+  </template>
 </templateSet>
