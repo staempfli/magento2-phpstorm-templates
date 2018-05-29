@@ -484,7 +484,7 @@
       <option name="XML" value="true" />
     </context>
   </template>
-  <template name="2magento add column" value="$setup-&gt;getConnection()-&gt;addColumn(&#10;    $setup-&gt;getTable('$tableName$'),&#10;    '$columnName$',&#10;    [&#10;        'type' =&gt; Table::TYPE_$type$,&#10;        'lenght' =&gt; null,&#10;        'nullable' =&gt; true,&#10;        'default' =&gt; '$default$',&#10;        'comment' =&gt; '$columnName$',&#10;    ]&#10;);" description="" toReformat="false" toShortenFQNames="true">
+  <template name="2magento add column" value="$setup-&gt;getConnection()-&gt;addColumn(&#10;    $setup-&gt;getTable('$tableName$'),&#10;    '$columnName$',&#10;    [&#10;        'type' =&gt; Table::TYPE_$type$,&#10;        'length' =&gt; null,&#10;        'nullable' =&gt; true,&#10;        'default' =&gt; '$default$',&#10;        'comment' =&gt; '$columnName$',&#10;    ]&#10;);" description="" toReformat="false" toShortenFQNames="true">
     <variable name="tableName" expression="" defaultValue="" alwaysStopAt="true" />
     <variable name="columnName" expression="" defaultValue="" alwaysStopAt="true" />
     <variable name="type" expression="" defaultValue="" alwaysStopAt="true" />
